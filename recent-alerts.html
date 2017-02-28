@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Recent Alerts</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+
+        <!-- Swing Trader FavIcon -->
+        <link rel="icon" href="images/swing-trader-favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="images/swing-trader-favicon.ico" type="image/x-icon">
+
+        <!-- Foundation CSS -->
+        <link rel="stylesheet" href="foundation-5/css/foundation.css">
+        <link rel="stylesheet" href="foundation-5/css/app.css">
+
+        <!-- Foundation Modernizr Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+        <!-- jQuery library -->
+        <script src="foundation-5/js/vendor/jquery.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="foundation-5/js/foundation.min.js"></script>
+
+        <!-- Foundation Off-Canvas Script -->
+        <script src="foundation-5/js/foundation/foundation.off-canvas.js"></script>
+
+        <!-- Foundation Equalizer: Used to make columns within a row equal height! -->
+        <script src="foundation-5/js/foundation/foundation.equalizer.js"></script>
+
+        <!-- Foundation Modal Script -->
+        <script src="foundation-5/js/foundation/foundation.reveal.js"></script>
+        
+        <!-- Foundation Alert Script -->
+        <script src="foundation-5/js/foundation/foundation.alert.js"></script>
+
+        <!-- Main Navigation Active Script -->
+        <script src="js/swing-trader.js"></script>
+
+        <!-- Experimental Pnotify notifcation files -->
+        <script type="text/javascript" src="js/pnotify.custom.min.js"></script>
+        <link href="css/pnotify.custom.min.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="css/animate.css" media="all" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <div data-alert class="alert-box">
+                    <p>This is what a banner alert would look like.</p>
+                    <a href="#" class="close">&times;</a>
+                </div>
+                <header>
+                    <div class="row full-width show-for-large-up">
+                        <div class="small-12 medium-12 large-6 columns">
+                            <h1 class="logo"><a href="index.html"><img src="images/logo-no-tagline.png" alt="Swing Trader"></a></h1>
+                            <h2 class="logo-tagline"><a href="http://www.investors.com"><img src="images/logo-tagline.png" alt="By Investors Business Daily"></a></h2>
+                        </div>
+                        <div class="small-12 medium-12 large-6 columns">
+                            <nav id="main-nav">
+                                <ul>
+                                    <li><a class="current-trades" href="index.html">CURRENT TRADES</a></li>
+                                    <li><a class="past-trades active-link" href="past-trades.html">PAST TRADES</a></li>
+                                    <li><a class="about-trades" href="about.html">ABOUT</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row full-width show-for-small-only">
+                        <div class="small-12 columns full-width no-padding">
+                            <nav class="tab-bar">
+                                <section class="left-small">
+                                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                                </section>
+                                <section class="middle tab-bar-section">
+                                    <h1 class="header-mobile"><a href="#">RECENT ALERTS</a></h1>
+                                </section>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row full-width show-for-medium-only">
+                        <div class="small-12 columns full-width no-padding">
+                            <nav class="tab-bar">
+                                <section class="left-small">
+                                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                                </section>
+                                <section class="middle tab-bar-section">
+                                    <h1 class="header-mobile"><a href="#">RECENT ALERTS</a></h1>
+                                </section>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <div class="wrapper">
+                    <aside class="left-off-canvas-menu">
+                        <ul class="off-canvas-list">
+                            <li><a href="#"><img src="images/logo-no-tagline.png" alt="Swing Trader"></a></li>
+                            <li><a class="current-trades" href="index.html">CURRENT TRADES</a></li>
+                            <li><a class="past-trades" href="past-trades.html">PAST TRADES</a></li>
+                            <li><a class="about-trades" href="about.html">ABOUT</a></li>
+                            <li><a href="concierge.html">CONCIERGE</a></li>
+                            <li><label></label></li>
+                            <li><a href="http://www.investors.com">Investors.com</a></li>
+                        </ul>
+                    </aside>
+                    <a class="exit-off-canvas"></a>
+
+                    <div class="row full-width">
+                        <div class="small-12 medium-12 large-12 columns recent-alerts-mobile">
+                            <div class="panel">
+                                <div id="recent-alerts-chart-header" class="row">
+                                    <div class="small-12 large-12 columns">
+                                        <span class="recent-alerts-heading">RECENT ALERTS LIST</span>
+                                        <form id="recent-alerts-search-fields">
+                                            <input type="search" placeholder="Search Trades" required class="show-for-large-up">
+                                            <input type="search" placeholder="Search Trades" required class="show-for-medium-only">
+                                            <a href="#" data-reveal-id="recent-alerts-search-modal"><img src="images/search-icon.png" alt="Search" class="show-for-small-only"></a>
+                                            <div id="recent-alerts-search-modal" class="reveal-modal" data-reveal="" aria-labelledby="myModal" aria-hidden="true" role="dialog" style="display: none; opacity: 1; visibility: hidden; top: 0; background: none;">
+                                                <div class="searchInput">
+                                                    <input id="searchInput" type="text" autofocus="autofocus" placeholder="Search" class="searchText">                                        
+                                                </div>
+                                                <a class="close-reveal-modal" aria-label="close">×</a>
+                                            </div>
+                                            <select name="year">
+                                                <option value="2016" selected>2016</option>
+                                                <option value="2015">2015</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="small-12 large-12 columns overflow show-for-medium-up">
+                                        <table id="recent-alerts" class="full-width">
+                                            <thead>
+                                                <tr>
+                                                    <th class="date"><a href="#">DATE</a></th>
+                                                    <th class="symbol"><a href="#">SYMBOL</a></th>
+                                                    <th class="company-name"><a href="#">COMPANY NAME</a></th>
+                                                    <th class="alert"><a href="#">ALERT</a></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>APPL</td>
+                                                    <td>Apple Inc.</td>
+                                                    <td>Stock now in Short Zone</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>BBB</td>
+                                                    <td>Brown Brothers, Inc.</td>
+                                                    <td>Stock now in Buy Zone</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>CCDD</td>
+                                                    <td>Coast Energy Inc.</td>
+                                                    <td>New short stock added to SwingTrader</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>EIN <span class="short-trade-label"></span></td>
+                                                    <td>Eastern Group Prod.</td>
+                                                    <td>New stock added to SwingTrader</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>REIM</td>
+                                                    <td>Rainmaker Solutions</td>
+                                                    <td>Stock has triggered stop loss</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>SRTI</td>
+                                                    <td>Southwest Trans Inc.</td>
+                                                    <td>Stock did not trigger a buy point</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>XYZ</td>
+                                                    <td>Xeigraph Farming</td>
+                                                    <td>Stock removed from SwingTrader</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>APPL</td>
+                                                    <td>Apple Inc.</td>
+                                                    <td>Stock now in Short Zone</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>BBB</td>
+                                                    <td>Brown Brothers, Inc.</td>
+                                                    <td>Stock now in Buy Zone</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>CCDD</td>
+                                                    <td>Coast Energy Inc.</td>
+                                                    <td>New short stock added to SwingTrader</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>EIN <span class="short-trade-label"></span></td>
+                                                    <td>Eastern Group Prod.</td>
+                                                    <td>New stock added to SwingTrader</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>REIM</td>
+                                                    <td>Rainmaker Solutions</td>
+                                                    <td>Stock has triggered stop loss</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>SRTI</td>
+                                                    <td>Southwest Trans Inc.</td>
+                                                    <td>Stock did not trigger a buy point</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">00/00/2015</a></th>
+                                                    <td>XYZ</td>
+                                                    <td>Xeigraph Farming</td>
+                                                    <td>Stock removed from SwingTrader</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="pagination-centered">
+                                            <ul class="pagination">
+                                                <li class="arrow unavailable"><a href="">&laquo;</a></li>
+                                                <li class="current"><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><a href="">4</a></li>
+                                                <li class="unavailable"><a href="">&hellip;</a></li>
+                                                <li><a href="">12</a></li>
+                                                <li><a href="">13</a></li>
+                                                <li class="arrow"><a href="">&raquo;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="small-12 columns show-for-small-only">
+                                        <div class="overflow">
+                                            <table id="recent-alerts-mobile" class="full-width">
+                                                <thead>
+                                                    <tr>
+                                                        <th>DATE</th>
+                                                        <th class="alert-symbol-header">SYMBOL</th>
+                                                        <th class="table-center">ALERT</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">APPL</td>
+                                                        <td>Stock now in Short Zone</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">BBB</td>
+                                                        <td>Stock now in Buy Zone</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">CCDD</td>
+                                                        <td>New short stock added to SwingTrader</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">EIN <span class="short-trade-label-mobile">S</span></td>
+                                                        <td>New stock added to SwingTrader</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">REIM</td>
+                                                        <td>Stock has triggered stop loss</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">SRTI</td>
+                                                        <td>Stock did not trigger a buy point</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">XYZ</td>
+                                                        <td>Stock removed from SwingTrader</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">APPL</td>
+                                                        <td>Stock now in Short Zone</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">BBB</td>
+                                                        <td>Stock now in Buy Zone</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">CCDD</td>
+                                                        <td>New short stock added to SwingTrader</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">EIN <span class="short-trade-label-mobile">S</span></td>
+                                                        <td>New stock added to SwingTrader</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">REIM</td>
+                                                        <td>Stock has triggered stop loss</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">SRTI</td>
+                                                        <td>Stock did not trigger a buy point</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>06/15</th>
+                                                        <td class="alert-symbol-mobile">XYZ</td>
+                                                        <td>Stock removed from SwingTrader</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="pagination-centered">
+                                            <ul class="pagination">
+                                                <li class="arrow unavailable"><a href="">&laquo;</a></li>
+                                                <li class="current"><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><a href="">4</a></li>
+                                                <li class="unavailable"><a href="">&hellip;</a></li>
+                                                <li><a href="">12</a></li>
+                                                <li><a href="">13</a></li>
+                                                <li class="arrow"><a href="">&raquo;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="row full-width">
+                            <div class="small-12 medium-12 large-12 columns">
+                                <p>Copyright 2015 Investor's Business Daily. 07/30/2015 (Market Close)</p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).foundation();
+        </script>
+        <script>
+            // When ready...
+            window.addEventListener("load", function () {
+                // Set a timeout...
+                setTimeout(function () {
+                    // Hide the address bar!
+                    window.scrollTo(0, 1);
+                }, 0);
+            });
+        </script>
+        <!-- This makes the off-canvas menu jump to the top of the page when it's opened in the middle or below the page! This is without an animation effect. -->
+        <script>
+            $("a[class='left-off-canvas-toggle menu-icon']").click(function () {
+                $("html, body").scrollTop(0);
+                $("left-off-canvas-menu").open({scrollTop: 0});
+                return false;
+            });
+        </script>
+    </body>
+</html>

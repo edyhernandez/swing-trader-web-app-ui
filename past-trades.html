@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Past Trades</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+
+        <!-- Swing Trader FavIcon -->
+        <link rel="icon" href="images/swing-trader-favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="images/swing-trader-favicon.ico" type="image/x-icon">
+
+        <!-- Foundation CSS -->
+        <link rel="stylesheet" href="foundation-5/css/foundation.css">
+        <link rel="stylesheet" href="foundation-5/css/app.css">
+
+        <!-- Foundation Modernizr Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+        <!-- jQuery library -->
+        <script src="foundation-5/js/vendor/jquery.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="foundation-5/js/foundation.min.js"></script>
+
+        <!-- Foundation Off-Canvas Script -->
+        <script src="foundation-5/js/foundation/foundation.off-canvas.js"></script>
+
+        <!-- Foundation Equalizer: Used to make columns within a row equal height! -->
+        <script src="foundation-5/js/foundation/foundation.equalizer.js"></script>
+
+        <!-- Foundation Modal Script -->
+        <script src="foundation-5/js/foundation/foundation.reveal.js"></script>
+        
+        <!-- Foundation Alert Script -->
+        <script src="foundation-5/js/foundation/foundation.alert.js"></script>
+
+        <!-- Main Navigation Active Script -->
+        <script src="js/swing-trader.js"></script>
+
+        <!-- Doughnut Graph jQuery Code -->
+        <script src="js/doughnut-graph.js"></script>
+
+        <!--- Horizontal Bar Graph Script -->
+        <script src="js/horizontal-bar-graph.js"></script>
+
+        <!-- Experimental Pnotify notifcation files -->
+        <script type="text/javascript" src="js/pnotify.custom.min.js"></script>
+        <link href="css/pnotify.custom.min.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="css/animate.css" media="all" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <div data-alert class="alert-box">
+                    <p>This is what a banner alert would look like.</p>
+                    <a href="#" class="close">&times;</a>
+                </div>
+                <header>
+                    <div class="row full-width show-for-large-up">
+                        <div class="small-12 medium-12 large-6 columns">
+                            <h1 class="logo"><a href="index.html"><img src="images/logo-no-tagline.png" alt="Swing Trader"></a></h1>
+                            <h2 class="logo-tagline"><a href="http://www.investors.com"><img src="images/logo-tagline.png" alt="By Investors Business Daily"></a></h2>
+                        </div>
+                        <div class="small-12 medium-12 large-6 columns">
+                            <nav id="main-nav">
+                                <ul>
+                                    <li><a class="current-trades" href="index.html">CURRENT TRADES</a></li>
+                                    <li><a class="past-trades active-link" href="past-trades.html">PAST TRADES</a></li>
+                                    <li><a class="about-trades" href="about.html">ABOUT</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row full-width show-for-small-only">
+                        <div class="small-12 columns full-width no-padding">
+                            <nav class="tab-bar">
+                                <section class="left-small">
+                                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                                </section>
+                                <section class="middle tab-bar-section">
+                                    <h1 class="header-mobile"><a href="about.html">PAST TRADES</a></h1>
+                                </section>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row full-width show-for-medium-only">
+                        <div class="small-12 columns full-width no-padding">
+                            <nav class="tab-bar">
+                                <section class="left-small">
+                                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                                </section>
+                                <section class="middle tab-bar-section">
+                                    <h1 class="header-mobile"><a href="#">PAST TRADES</a></h1>
+                                </section>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <div class="wrapper">
+                    <aside class="left-off-canvas-menu">
+                        <ul class="off-canvas-list">
+                            <li><a href="#"><img src="images/logo-no-tagline.png" alt="Swing Trader"></a></li>
+                            <li><a class="current-trades" href="index.html">CURRENT TRADES</a></li>
+                            <li><a class="past-trades" href="past-trades.html">PAST TRADES</a></li>
+                            <li><a class="about-trades" href="about.html">ABOUT</a></li>
+                            <li><a href="concierge.html">CONCIERGE</a></li>
+                            <li><label></label></li>
+                            <li><a href="http://www.investors.com">Investors.com</a></li>
+                        </ul>
+                    </aside>
+                    <a class="exit-off-canvas"></a>
+
+                    <div class="row full-width">
+                        <div class="small-12 medium-12 large-12 columns past-trades-charts-mobile">
+                            <div class="panel">
+                                <div class="row">
+                                    <div class="small-12 medium-6 large-6 columns doughnut-chart-mobile">
+                                        <h3>SwingTrader PERFORMANCE</h3>
+                                        <div class="row doughnut-section-mobile">
+                                            <div class="small-6 medium-6 large-6 columns">
+                                                <div id="doughnutChart" class="chart">
+                                                </div>
+                                            </div>
+                                            <div class="small-6 medium-6 large-6 columns">
+                                                <table id="past-trades-doughnut-chart-table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="green-legend-box"></td>
+                                                            <th class="past-trades-doughnut-chart-win">WIN</th>
+                                                            <td>78%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="red-legend-box"></td>
+                                                            <th class="past-trades-doughnut-chart-loss">LOSS</th>
+                                                            <td>22%</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="small-12 medium-6 large-6 columns">
+                                        <div class="row">
+                                            <div class="small-6 medium-6 large-6 columns">
+                                                <div class="horz-bars show-for-medium-up">
+                                                    <ul class="data">
+                                                        <li>
+                                                            <div class="bar bar-winner"></div>
+                                                            <span class="winner-value">78%</span>
+
+                                                        </li>
+                                                        <li></li>
+                                                        <li>
+                                                            <div class="bar bar-loser"></div>
+                                                            <span class="loser-value">22%</span>
+
+                                                        </li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="small-6 medium-6 large-6 columns">
+                                                <table id="past-trades-bar-chart-table" class="show-for-medium-up">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="past-trades-bar-chart-win">AVERAGE WINNER</th>
+                                                            <td class="win">78%</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="past-trades-bar-chart-loss">AVERAGE LOSER</th>
+                                                            <td class="loss">22%</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="row show-for-small-only">
+                                            <div class="small-12 columns">
+                                                <div class="row">
+                                                    <div class="small-6 columns no-padding">
+                                                        <div class="horz-bars">
+                                                            <ul class="data">
+                                                                <li style="padding: 6px 0 0 0;">
+                                                                    <div class="bar bar-winner"></div>
+                                                                    <span class="winner-value">100%</span>
+                                                                </li>
+                                                                <li><span class="tradeText past-trades-bar-chart-win show-for-medium-up">AVERAGE WINNER<span class="barNum">100%</span></span></li>
+                                                                <li style="padding: 0;">
+                                                                    <div class="bar bar-loser"></div>
+                                                                    <span class="loser-value">50%</span>
+                                                                </li>
+                                                                <li><span class="tradeText past-trades-bar-chart-loss show-for-medium-up">AVERAGE LOSER <span class="barNum">-30%</span></span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small-6 columns no-padding">
+                                                        <div class="show-for-small-only">
+                                                            <table id="past-trades-bar-chart-table-mobile">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th class="past-trades-bar-chart-mobile-win">AVG. WIN</th>
+                                                                        <td>100%</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th class="past-trades-bar-chart-mobile-loss">AVG. LOSS</th>
+                                                                        <td>-30%</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <p>Year to date</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row full-width">
+                        <div class="small-12 medium-12 large-12 columns past-trades-mobile">
+                            <div class="panel">
+                                <div id="past-trades-chart-header" class="row">
+                                    <div class="small-12 large-12 columns">
+                                        <span class="past-trades-heading">PAST TRADES LIST</span>
+                                        <form id="past-trades-search-fields">
+                                            <input type="search" placeholder="Search Trades" required class="show-for-large-up">
+                                            <input type="search" placeholder="Search Trades" required class="show-for-medium-only">
+                                            <a href="#" data-reveal-id="past-trades-search-modal"><img src="images/search-icon.png" alt="Search" class="show-for-small-only"></a>
+                                            <div id="past-trades-search-modal" class="reveal-modal" data-reveal="" aria-labelledby="myModal" aria-hidden="true" role="dialog" style="display: none; opacity: 1; visibility: hidden; top: 0; background: none;">
+                                                <div class="searchInput">
+                                                    <input id="searchInput" type="text" autofocus="autofocus" placeholder="Search" class="searchText">                                        
+                                                </div>
+                                                <a class="close-reveal-modal" aria-label="close">×</a>
+                                            </div>
+                                            <select name="year">
+                                                <option value="2016" selected>2016</option>
+                                                <option value="2015">2015</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="small-12 large-12 columns overflow show-for-medium-up">
+                                        <table id="past-trades" class="full-width">
+                                            <thead>
+                                                <tr>
+                                                    <th><a href="#">SYMBOL</a></th>
+                                                    <th><a href="#">COMPANY NAME</a></th>
+                                                    <th class="table-center"><a href="#">ENTRY</a></th>
+                                                    <th class="table-center"><a href="#">EXIT</a></th>
+                                                    <th class="table-center"><a href="#">ENTRY PRICE</a></th>
+                                                    <th class="table-center"><a href="#">EXIT PRICE</a></th>
+                                                    <th><a href="#">GAIN/LOSS</a></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th><a href="#">AAPL</a></th>
+                                                    <td>Apple. Inc.</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$111.84</td>
+                                                    <td class="table-center">$111.84</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">1000.75%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">BBB</a></th>
+                                                    <td>Brown Brothers, Inc.</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$107.19</td>
+                                                    <td class="table-center">$107.19</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">150.54%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">CCDD</a></th>
+                                                    <td>Coast Energy Inc.</td>
+                                                    <td class="table-center">Not Triggered</td>
+                                                    <td class="table-center"></td>
+                                                    <td class="table-center"></td>
+                                                    <td class="table-center"></td>
+                                                    <td class=""></td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">EIN</a></th>
+                                                    <td>Eastern Group Prod. <span class="short-trade-label"></span></td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$98.72</td>
+                                                    <td class="table-center">$98.72</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">17.23%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">REIM</a></th>
+                                                    <td>Rainmaker Solutions</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$92.70</td>
+                                                    <td class="table-center">$92.70</td>
+                                                    <td class="trade-red-arrow"><img src="images/red-arrow.svg" alt="">2.65%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">SRTI</a></th>
+                                                    <td>Southwest Trans Inc.</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$84.45</td>
+                                                    <td class="table-center">$84.45</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">6.87%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">XYZ</a></th>
+                                                    <td>Xeigraph Farming</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$76.00</td>
+                                                    <td class="table-center">$76.00</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">1.45%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">XOMA</a></th>
+                                                    <td>XOMA Inc.</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$62.66</td>
+                                                    <td class="table-center">$62.66</td>
+                                                    <td class="trade-red-arrow"><img src="images/red-arrow.svg" alt="">15.78%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">CDOS</a></th>
+                                                    <td>CDOS Productions</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$47.83</td>
+                                                    <td class="table-center">$47.83</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">2.76%</td>
+                                                </tr>
+                                                <!-- More dummy table content -->
+                                                <tr>
+                                                    <th><a href="#">AAPL</a></th>
+                                                    <td>Apple. Inc.</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$111.84</td>
+                                                    <td class="table-center">$111.84</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">4.75%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">BBB</a></th>
+                                                    <td>Brown Brothers, Inc.</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$121.33</td>
+                                                    <td class="table-center">$121.33</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">7.54%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">CCDD</a></th>
+                                                    <td>Coast Energy Inc.</td>
+                                                    <td class="table-center">Not Triggered</td>
+                                                    <td class="table-center"></td>
+                                                    <td class="table-center"></td>
+                                                    <td class="table-center"></td>
+                                                    <td class="table-center"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">EIN</a></th>
+                                                    <td>Eastern Group Prod. <span class="short-trade-label"></span></td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$98.72</td>
+                                                    <td class="table-center">$98.72</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">17.23%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">REIM</a></th>
+                                                    <td>Rainmaker Solutions</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$92.70</td>
+                                                    <td class="table-center">$92.70</td>
+                                                    <td class="trade-red-arrow"><img src="images/red-arrow.svg" alt="">2.65%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">SRTI</a></th>
+                                                    <td>Southwest Trans Inc.</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$84.45</td>
+                                                    <td class="table-center">$84.45</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">6.87%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">XYZ</a></th>
+                                                    <td>Xeigraph Farming</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$76.00</td>
+                                                    <td class="table-center">$76.00</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">1.45%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">XOMA</a></th>
+                                                    <td>XOMA Inc.</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$62.66</td>
+                                                    <td class="table-center">$62.66</td>
+                                                    <td class="trade-red-arrow"><img src="images/red-arrow.svg" alt="">15.78%</td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#">CDOS</a></th>
+                                                    <td>CDOS Productions</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">00/00/2015</td>
+                                                    <td class="table-center">$47.83</td>
+                                                    <td class="table-center">$47.83</td>
+                                                    <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">2.76%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="pagination-centered">
+                                            <ul class="pagination">
+                                                <li class="arrow unavailable"><a href="">&laquo;</a></li>
+                                                <li class="current"><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><a href="">4</a></li>
+                                                <li class="unavailable"><a href="">&hellip;</a></li>
+                                                <li><a href="">12</a></li>
+                                                <li><a href="">13</a></li>
+                                                <li class="arrow"><a href="">&raquo;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="small-12 columns show-for-small-only">
+                                        <div class="overflow">
+                                            <table id="past-trades-mobile" class="full-width">
+                                                <thead>
+                                                    <tr>
+                                                        <th>SYMBOL</th>
+                                                        <th class="table-center">ENTRY</th>
+                                                        <th class="table-center">EXIT</th>
+                                                        <th>GAIN/LOSS</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th><a href="#">AAPL</a> <span class="short-trade-label-mobile">S</span></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">1000%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">BBB</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">150%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">CCDD</a></th>
+                                                        <td class="table-center">Not Triggered</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">EIN</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">17</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">REIM <span class="short-trade-label-mobile">S</span></a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-red-arrow"><img src="images/red-arrow.svg" alt="">2%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">SRTI</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">6%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">XYZ</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">1%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">XOMA</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-red-arrow"><img src="images/red-arrow.svg" alt="">15%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">CDOS</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">2%</td>
+                                                    </tr>
+                                                    <!-- More dummy table content -->
+                                                    <tr>
+                                                        <th><a href="#">AAPL</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">4%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">BBB</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">7%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">CCDD</a></th>
+                                                        <td class="table-center">N/T</td>
+                                                        <td class="table-center"></td>
+                                                        <td class="table-center"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">EIN</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">17%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">REIM</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-red-arrow"><img src="images/red-arrow.svg" alt="">2%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">SRTI</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">6%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">XYZ</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">1%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">XOMA</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-red-arrow"><img src="images/red-arrow.svg" alt="">15%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><a href="#">CDOS</a></th>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="table-center">00/00/15</td>
+                                                        <td class="trade-green-arrow"><img src="images/green-arrow.svg" alt="">2%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="pagination-centered">
+                                            <ul class="pagination">
+                                                <li class="arrow unavailable"><a href="">&laquo;</a></li>
+                                                <li class="current"><a href="">1</a></li>
+                                                <li><a href="">2</a></li>
+                                                <li><a href="">3</a></li>
+                                                <li><a href="">4</a></li>
+                                                <li class="unavailable"><a href="">&hellip;</a></li>
+                                                <li><a href="">12</a></li>
+                                                <li><a href="">13</a></li>
+                                                <li class="arrow"><a href="">&raquo;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="row full-width">
+                            <div class="small-12 medium-12 large-12 columns">
+                                <p>Copyright 2015 Investor's Business Daily. 07/30/2015 (Market Close)</p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).foundation();
+        </script>
+        <script>
+            // When ready...
+            window.addEventListener("load", function () {
+                // Set a timeout...
+                setTimeout(function () {
+                    // Hide the address bar!
+                    window.scrollTo(0, 1);
+                }, 0);
+            });
+        </script>
+        <!-- This makes the off-canvas menu jump to the top of the page when it's opened in the middle or below the page! This is without an animation effect. -->
+        <script>
+            $("a[class='left-off-canvas-toggle menu-icon']").click(function () {
+                $("html, body").scrollTop(0);
+                $("left-off-canvas-menu").open({scrollTop: 0});
+                return false;
+            });
+        </script>
+    </body>
+</html>

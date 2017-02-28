@@ -1,0 +1,4892 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 10, 2015, 4:15:49 PM
+    Author     : hernandez
+*/
+
+@import "foundation.css";
+
+/*************************************/
+/*************************************/
+/* Current Trades Page CSS Starts Here! */
+/*************************************/
+/*************************************/
+
+
+
+.testdiv {
+    border:solid black;
+}
+
+.testrow {
+    border: solid red;
+}
+
+.testcolumn {
+    border: solid blue;
+}
+
+.testpanel {
+    border: solid purple;
+}
+
+.row.full-width {
+    width: 100%;
+    max-width: 100%;
+}
+
+.table-center {
+    text-align: center; /* This is to center specific table headers and table data on the current trades chart */
+}
+
+.panel {
+    border-radius: 10px;
+    border-top-style: solid;
+    border-top-width: 10px;
+    border-top-color: #656565;
+    background-color: #ffffff;
+}
+
+.active-link {
+    color: #333399 !important;
+    font-family: lato !important; font-weight: 900 !important;
+}
+
+.chart-active-link {
+    background-color: #777777;
+    color: #ffffff !important; 
+    font-family: lato; font-weight: 400;
+}
+
+.overflow {
+    overflow: auto;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-padding-left {
+    padding-left: 0;
+}
+
+.no-margin {
+    margin: 0 0 0 0;
+}
+
+.alert-box {
+    z-index: 2;
+    width: 100%;
+    background-color: #ffffff;
+    border: solid #656565 2px;
+    border-radius: 10px;
+}
+
+.alert-box p {
+    margin: 0;
+    text-align: center;
+    font-family: lato;
+    font-weight: 400;
+    font-size: 1.225rem;
+    color: #333399;
+}
+
+.alert-box .close {
+    opacity: 1;
+    color: #333399;
+}
+
+/* IBD footer disclaimer global CSS starts here */
+
+.footerContainer {
+    margin: 1rem;
+    font-size: 11px;
+}
+
+.footerContainer a {
+    color: #039   
+}
+
+/* IBD footer disclaimer global CSS ends here */
+
+body {
+    background-color: #eeeeee;
+    font-family: lato; font-weight: 400;
+    color: #666666;
+    padding: 0 20px 0 20px;
+}
+
+header {
+    margin-bottom: 20px;
+    padding-top: 35px;
+}
+
+header h1.logo {
+    margin: -10px 0 0 0;
+    float: left;
+    clear: both;
+}
+
+header h2.logo-tagline {
+    float: left;
+    clear: left;
+    margin: -15px 0px 0 0px;
+    padding: 0px 0 0 157px;
+    display: inline-block;
+}
+
+h3 {
+    font-family: lato; font-weight: 700;
+    font-size: 1.25rem;
+    color: #454952;
+}
+
+h4 {
+    font-family: lato; font-weight: 400;
+    font-size: 1.25rem;
+    color: #454952;
+}
+
+h4.trade-heading {
+    margin: 0 0 15px 0;
+}
+
+h4 span.stock-symbol{
+    font-family: lato; font-weight: 700;
+}
+
+h4 span.stock-symbol a {
+    color: #454952;
+}
+
+h4 span.short-trade-label {
+    display: inline-block;
+    width: 50px;
+    height: 15px;
+    background-image: url(images/short-label.png);
+    background-size: 50px 15px;
+    margin: 0px 0 0px 2px;
+}
+
+div#myModal.reveal-modal.open {
+    display:block;
+    opacity: 1;
+    visibility: visible;
+    top: 85px !important;
+    left: 852px;
+    width: 396px;
+}
+
+div#myModal.reveal-modal.open img {
+    float: left;
+    margin: 0 10px 0 0px;
+}
+
+/* Joyride styling starts here */
+
+.joyride-tip-guide {
+    background: #444447;
+}
+
+div.joyride-tip-guide span.joyride-nub.top {
+    border-color: #444447;
+}
+
+div.joyride-tip-guide span.joyride-nub.right {
+    border-color: #444447 !important;
+    border-right-color: transparent !important;
+    border-bottom-color: transparent !important;
+    border-top-color: transparent !important;
+}
+
+div.joyride-tip-guide span.joyride-nub.bottom {
+    border-color: #444447;
+}
+
+div.joyride-tip-guide span.joyride-nub.left {
+    border-color: #444447;
+}
+
+div.joyride-content-wrapper a.small.button.joyride-prev-tip {
+    background-color: #563d93;
+}
+
+div.joyride-content-wrapper a.small.button.joyride-next-tip {
+    background-color: #99cc00;
+}
+
+div.joyride-tip-guide div.joyride-content-wrapper ul li {
+    font-size: 0.875rem;
+}
+
+div.joyride-tip-guide[data-index="1"] {
+    margin-top: 10px;
+}
+
+div.joyride-tip-guide[data-index="2"] {
+    margin-left: 200px;
+}
+
+div.joyride-tip-guide[data-index="3"] {
+    margin-top: 10px;
+}
+
+div.joyride-tip-guide[data-index="5"] {
+    margin-top: 10px;
+}
+
+div.joyride-tip-guide[data-index="6"] {
+    margin-left: -15px;
+}
+
+div.joyride-tip-guide[data-index="6"] span.joyride-nub.right {
+    margin-top: -22px;
+}
+
+div.joyride-tip-guide[data-index="7"] {
+    margin-left: -10px;
+}
+
+div.joyride-tip-guide[data-index="7"] span.joyride-nub.right {
+    top: 0;
+}
+
+div.joyride-tip-guide[data-index="8"] {
+    margin-left: 10px;
+}
+
+div.joyride-tip-guide[data-index="8"] span.joyride-nub.right {
+    top: 0;
+}
+
+nav#main-nav {
+    /* border: solid blue; */
+    margin-top:20px;
+    font-family: lato; font-weight: 300;
+    color:#000;
+    font-size: 1.25rem;
+}
+
+nav#main-nav ul {
+    margin:0;
+    padding:0px;
+    height: auto;
+    list-style-type: none;
+    text-align: right;
+}
+
+nav#main-nav li {
+    display: inline;
+    padding: 0 0 0 30px;
+    width:100%;
+}
+
+nav#main-nav ul li.settings-cog {
+    padding: 0 0 0 0;
+}
+
+nav#main-nav ul li a {
+    font-family: lato; font-weight: 300;
+    font-size: 1.25rem;
+    color: #777;
+}
+
+nav#main-nav ul li a:hover {
+    color: #333399;
+}
+
+nav#main-nav ul li a img {
+    padding: 0 0 0 0;
+    margin: -5px 0 0 0;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+div#trade-setup-header h3 {
+    float: left;
+}
+
+ul#trade-setup-nav {
+    margin:0;
+    padding:0px;
+    text-align: right;
+    float: right;
+}
+
+ul#trade-setup-nav li {
+    padding: 0px;
+    display: inline;
+    color: #808080;
+}
+
+ul#trade-setup-nav li a {
+    font-family: lato; font-weight: 400;
+    font-size: 1rem;
+    color: #454952;
+}
+
+table#stock-info-table {
+    border:none;
+    background-color:#ffffff;
+    margin:0;
+    padding:0px;
+}
+
+table#stock-info-table tbody tr th {
+    font-family: lato; font-weight: 400;
+    font-size: 2.0625rem;
+    font-weight: normal;
+    padding: 0px;
+}
+
+table#stock-info-table tbody tr td {
+    font-family: lato; font-weight: 400;
+    font-size: 1.4375rem;
+    color: #454952;
+    padding:0px 0px 0px 0px;
+}
+
+table#stock-info-table tbody tr td.trade-up {
+    color: #009933;
+}
+
+table#stock-info-table tbody tr td.trade-down {
+    color: #ff0000;
+}
+
+table#stock-info-table tbody tr td.trade-arrow-up {
+    background-image: url(../../images/green-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 20px 20px;
+    background-position: 14% 49%;
+    padding: 0 10px 0 30px;
+    color: #009933;
+}
+
+table#stock-info-table tbody tr td.trade-arrow-down {
+    background-image: url(../../images/red-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 20px 20px;
+    background-position: 14% 49%;
+    padding: 0 10px 0 30px;
+    color: #ff0000;
+}
+
+table#trade-setup-table {
+    border:none;
+    background-color: #ffffff;
+    margin: 20px 0 0 0;
+}
+
+table#trade-setup-table tbody tr {
+    border:none;
+    background-color: #ffffff;
+    width:100%;
+}
+
+table#trade-setup-table tbody tr th {
+    background-color: #ffffff;
+    font-family: lato; font-weight: 700;
+    color: #000000;
+    font-size: 0.875rem;
+    padding:3px 0px 0px 0px;
+    width:30%;
+    vertical-align: top;
+    min-width: 95px;
+}
+
+table#trade-setup-table tbody tr td {
+    padding: 0 0 7px 0px;
+    margin:0;
+    font-family: lato; font-weight: 400;
+    color: #666666;
+    line-height: 1.4;
+    font-size: 0.975rem;
+    vertical-align: top;
+}
+
+table#trade-setup-table tbody tr td span.buy-zone {
+    background-color: #6666cc;
+    color: white;
+    font-size: 0.775rem;
+    padding: 2px 5px 2px 5px;
+}
+
+table#trade-setup-table tbody tr td span.short-zone {
+    background-color: #6666cc;
+    color: white;
+    font-size: 0.775rem;
+    padding: 2px 5px 2px 5px;
+}
+
+div#market-action-section.panel p {
+    margin:0;
+    color:#666666;
+    font-size:0.975rem;
+    line-height: 1.5;
+}
+
+div#market-action-section.panel h3 {
+    margin-bottom: 15px;
+}
+
+div#market-action-section.panel h4 {
+    color:#000;
+    font-size:1.0625rem;
+    line-height: 1.5;
+    font-family: lato; font-weight: 900;
+    margin: 3px 0 0 0;
+}
+
+div#market-action-section.panel img {
+    float: left;
+    margin: 0 10px 0 0px;
+}
+
+table#market-action-table {
+    border: none;
+    background-color:#ffffff;
+    width: 100%;
+    margin:0;
+    padding:17px 0px 17px 0px;
+}
+
+table#market-action-table tbody {
+
+}
+
+table#market-action-table tbody tr {
+    border: none;
+    background-color:#ffffff;
+}
+
+table#market-action-table tbody tr th {
+    padding:0px;
+    margin:0px;
+    font-weight:normal;
+}
+
+table#market-action-table tbody tr td {
+    font-size:0.875rem;
+    line-height: 1.7;
+    padding:0px;
+    padding-left: 0px;
+    margin:0;
+    text-align: right;
+}
+
+div#market-action-section.panel table#market-action-table tbody tr td.market-red {
+    color: #ff0000;
+    text-align: left;
+}
+
+div#market-action-section.panel p a {
+    color: #000000;
+    font-family: lato; font-weight: 700;
+}
+
+div#market-action-section.panel table#market-action-table tbody tr td.market-red-arrow {
+    color: #ff0000;
+    background-image: url(../../images/red-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 12px 12px;
+    background-position: 15px 49%;
+    padding: 0 10px 0 30px;
+    text-align: left;
+}
+
+div#market-action-section.panel table#market-action-table tbody tr td.market-green {
+    color: #009900;
+    text-align: left;
+}
+
+div#market-action-section.panel table#market-action-table tbody tr td.market-green-arrow {
+    color: #009900;
+    background-image: url(../../images/green-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 12px 12px;
+    background-position: 15px 49%;
+    padding: 0 10px 0 30px;
+    text-align: left;
+}
+
+div#market-action-section.panel table#market-action-table tbody tr td img {
+    float: left;
+    margin: 6px 0 0 15px;
+}
+
+div#market-action-section-tablet.panel p {
+    margin:0;
+    color:#666666;
+    font-size:0.975rem;
+    line-height: 1.5;
+}
+
+div#market-action-section-tablet.panel h3 {
+    margin-bottom: 15px;
+}
+
+div#market-action-section-tablet.panel h4 {
+    color:#000;
+    font-size:1.0625rem;
+    line-height: 1.5;
+    font-family: lato; font-weight: 900;
+    margin: 3px 0 0 0;
+}
+
+div#market-action-section-tablet.panel img {
+    float: left;
+    margin: 0 10px 0 0px;
+}
+
+div#market-action-section-tablet.panel table#market-action-table tbody tr td.market-red {
+    color: #ff0000;
+    text-align: left;
+}
+
+div#market-action-section-tablet.panel p a {
+    color: #000000;
+    font-family: lato; font-weight: 700;
+}
+
+div#market-action-section-tablet.panel table#market-action-table tbody tr td.market-red-arrow {
+    color: #ff0000;
+    background-image: url(../../images/red-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 12px 12px;
+    background-position: 15px 49%;
+    padding: 0 10px 0 30px;
+    text-align: left;
+}
+
+div#market-action-section-tablet.panel table#market-action-table tbody tr td.market-green {
+    color: #009900;
+    text-align: left;
+}
+
+div#market-action-section-tablet.panel table#market-action-table tbody tr td.market-green-arrow {
+    color: #009900;
+    background-image: url(../../images/green-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 12px 12px;
+    background-position: 15px 49%;
+    padding: 0 10px 0 30px;
+    text-align: left;
+}
+
+div#market-action-section-tablet.panel table#market-action-table tbody tr td img {
+    float: left;
+    margin: 6px 0 0 15px;
+}
+
+div#trade-setup-chart-section h6 {
+    margin:0;
+    font-weight: 700;
+}
+
+figure.trade-chart {
+    width: 100%;
+    margin:0;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+figure.trade-chart img {
+    width:100%;
+    height:100%;    
+}
+
+figure.trade-chart figcaption {
+    text-align: right;
+    padding-top: 5px;
+    font-size: 0.6875rem;
+}
+
+figure.trade-chart figcaption a {
+    color: #454952;
+}
+
+table.full-width {
+    width:100%;
+    max-width: 100%
+}
+
+table#current-trades.full-width {
+    background-color: #ffffff;
+    border: none;
+    border-collapse: collapse;
+}
+
+table#current-trades.full-width thead tr {
+    background-color: #ffffff;
+    border-bottom: solid #c6c6c6 1px;
+}
+
+table#current-trades.full-width thead tr th {
+    font-family: lato; font-weight: 700;
+    font-size: 0.875rem;
+    color: #454952;
+}
+
+table#current-trades.full-width thead tr th a {
+    color: #454952;
+    text-decoration: none;
+}
+
+table#current-trades.full-width tbody tr {
+    background-color: #ffffff;
+}
+
+table#current-trades.full-width tbody tr:hover {
+    background-color: #e3e1e7;
+}
+
+table#current-trades.full-width tbody tr.preview {
+    background-color: #ffdf00;
+}
+
+table#current-trades.full-width tbody tr th {
+    font-family: lato; font-weight: 700;
+    font-size: 0.875rem;
+    color: #333399;
+}
+
+table#current-trades.full-width tbody tr th a {
+    color: #333399;
+}
+
+table#current-trades.full-width tbody tr td span.new-trade-label {
+    background-image: url(images/new-label.png);
+    background-size: 40px 15px;
+    margin: 0px 5px -3px -45px;
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+}
+
+table#current-trades.full-width tbody tr td span.short-trade-label {
+    display: inline-block;
+    width: 50px;
+    height: 15px;
+    background-image: url(images/short-label.png);
+    background-size: 50px 15px;
+    margin: 0 0 -2px 5px;
+}
+
+table#current-trades.full-width thead tr th.price-chg {
+    width: 100px;
+}
+
+table#current-trades.full-width tbody tr td.price-chg {
+    padding: 0 0 0 20px;
+    width: 80px;
+}
+
+table#current-trades.full-width thead tr th.vol-chg {
+    width: 100px;
+}
+
+table#current-trades.full-width tbody tr td.vol-chg {
+    padding: 0 0 0 25px;
+    width: 80px;
+}
+
+table#current-trades tbody tr td.trade-red img {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    margin: 0 4px 4px 0;
+}
+
+table#current-trades tbody tr td.trade-red-arrow {
+    color: #ff0000;
+    background-image: url(../../images/red-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 12px 12px;
+    /* background-position: 39% 49%; This used to be 11% by 49%. */
+    /* padding: 0 10px 0 30px; */
+    text-align: center; /* The text used to be aligned left */
+    background-origin: padding-box;
+    background-position: left center;
+    width: 100px;
+}
+
+table#current-trades tbody tr td.trade-red {
+    color: #ff0000;
+}
+
+table#current-trades tbody tr td.trade-green img {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    margin: 0 4px 4px 0;
+}
+
+table#current-trades tbody tr td.trade-green-arrow {
+    color: #009900;
+    background-image: url(../../images/green-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 12px 12px;
+    /*background-position: 39% 49%;
+    padding: 0 10px 0 30px;*/
+    text-align: center;
+    background-origin: padding-box;
+    background-position: left center;
+    width: 100px;
+}
+
+table#current-trades tbody tr td.trade-green {
+    color: #009900;
+}
+
+footer p {
+    font-family: lato; font-weight: 400;
+    font-size: 0.6875rem;
+    color: #454952;
+}
+
+table#current-trades.full-width tbody tr td.trade-green.table-center span {
+    padding: 0 5px 0 0;
+}
+
+table#current-trades.full-width tbody tr td.trade-green.table-center span img {
+    width: 12px;
+    height: 12px;
+}
+
+table#current-trades.full-width tbody tr td.trade-red.table-center span {
+    padding: 0 5px 0 0;
+}
+
+table#current-trades.full-width tbody tr td.trade-red.table-center span img {
+    width: 12px;
+    height: 12px;
+}
+
+table#current-trades.full-width thead tr th.current-gain-loss {
+    width: 110px;
+}
+
+/*************************************/
+/*************************************/
+/* Trade Detail Page CSS Starts Here */
+/*************************************/
+/*************************************/
+
+div.row.trade-details-header-section {
+    /* border: solid #c6c6c6 1px; */
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 0 0 5px 0;
+}
+
+h3#trade-details-trade-name {
+    float: left;
+    font-family: lato; font-weight: 400;
+    font-size: 1.44rem;
+    color: #454952;
+    padding: 0 5px 0 0;
+}
+
+h3#trade-details-trade-name span.stock-symbol {
+    font-family: lato; font-weight: 900;
+    font-size: 1.44rem;
+    color: #000;
+    padding: 0 0 0 5px;
+}
+
+h3#trade-details-trade-name span#trade-details-stock-price {
+    font-family: lato; font-weight: 400;
+    font-size: 1.44rem;
+    color: #000;
+    padding: 0 0 0 5px;
+}
+
+table#trade-details-stock-info {
+    float: left;
+    border: none;
+    margin: -6px 0 0 0;
+    padding: 0 0 0 0;
+}
+
+table#trade-details-stock-info tbody tr th {
+    font-family: lato; font-weight: 400;
+    font-size: 1.44rem;
+    color: #000;
+    padding: 10px 0 0 10px;
+}
+
+table#trade-details-stock-info tbody tr th.volume {
+    padding: 10px 0 0 15px;
+}
+
+table#trade-details-stock-info tbody tr td {
+    font-family: lato; font-weight: 400;
+    font-size: 1.44rem;
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+table#trade-details-stock-info tbody tr td.stock-up-arrow {
+    color: #006600;
+    background-image: url(../../images/green-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px;
+    background-position: 8% 100%;
+    padding: 10px 0px 0px 30px;
+}
+
+table#trade-details-stock-info tbody tr td.stock-down-arrow {
+    color: #990000;
+    background-image: url(../../images/red-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-position: 8% 100%;
+    padding: 10px 0px 0 30px;
+}
+
+table#trade-details-stock-info tbody tr td.volume-up-arrow {
+    color: #006600;
+    background-image: url(../../images/green-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px;
+    background-position: 0% 100%;
+    padding: 10px 0px 0px 20px;
+}
+
+table#trade-details-stock-info tbody tr td.volume-down-arrow {
+    color: #990000;
+    background-image: url(../../images/red-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 17px 17px;
+    background-size: 17px 17px;
+    background-position: 0% 100%;
+    padding: 10px 0px 0 20px;
+}
+
+table#trade-details-stock-info tbody tr td.stock-up {
+    color: #006600;
+    padding: 10px 0 0 5px;
+}
+
+table#trade-details-stock-info tbody tr td.stock-down {
+    color: #990000;
+    padding: 10px 10px 0 5px;
+}
+
+div#trade-details-nav {
+    float: right;
+}
+
+div#trade-details-nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div#trade-details-nav ul li {
+    display: inline;
+    color: #808080;
+    font-size: 1.125rem;
+}
+
+div#trade-details-nav ul li a {
+    color: #666666;
+    font-size: 1.125rem;
+}
+
+div#trade-details-chart-nav {
+    float: right;
+    margin: 0 20px 0 0;
+    padding: 0 0 0 0;
+}
+
+div#trade-details-chart-nav a.chart-daily {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../images/st-sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    display: inline-block;
+    margin: 0 0 0 0;
+}
+
+div#trade-details-chart-nav a.chart-daily-active {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../images/st-sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0px -50px;
+    display: inline-block;
+    margin: 0 0 0 0;
+}
+
+div#trade-details-chart-nav a.chart-weekly {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../images/st-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -45px 0;
+    display: inline-block;
+    margin: 0 0 0 5px;
+}
+
+div#trade-details-chart-nav a.chart-weekly-active {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../images/st-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -45px -50px;
+    display: inline-block;
+    margin: 0 0 0 5px;
+}
+
+div#trade-details-chart-nav a.chart-intraday {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../images/st-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -90px 0;
+    display: inline-block;
+    margin: 0 0 0 5px;
+}
+
+div#trade-details-chart-nav a.chart-intraday-active {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../images/st-sprite.png);
+    background-repeat: no-repeat;
+    background-position: -90px -50px;
+    display: inline-block;
+    margin: 0 0 0 5px;
+}
+
+div#trade-details-chart-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div#trade-details-chart-nav ul li {
+    display: inline;
+}
+
+div#trade-details-chart-nav ul li.no-border {
+    border: none;
+}
+
+/*div#trade-details-chart-nav ul li a {
+    color: #454952;
+    font-family: lato; font-weight: 400;
+    font-size: 1rem;
+    margin: -2px;
+    padding: 3px 10px 3px 10px;
+    border: solid 1px #777777;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 0px;
+}*/
+
+div#trade-details-chart-nav ul li a.no-border {
+    border: none;
+}
+
+div#trade-details-chart-nav ul li a img {
+    width: 50px;
+    height: 30px;
+}
+
+table#trade-details-table-info {
+    padding: 10px 0 0 0;
+    border: none;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+table#trade-details-table-info tbody tr {
+    background-color: #ffffff;
+}
+
+table#trade-details-table-info tbody tr th {
+    text-align: left;
+    float: left;
+    clear: both;
+    padding: 0 0 5px 0;
+    font-family: lato; font-weight: 600;
+    font-size: 1rem;
+    color: #000;
+}
+
+table#trade-details-table-info tbody tr th span.short-trade-label {
+    display: inline-block;
+    width: 50px;
+    height: 15px;
+    background-image: url(images/short-label.png);
+    background-size: 50px 15px;
+    margin: 0px 0 0px 2px;
+}
+
+table#trade-details-table-info tbody tr td {
+    float: left;
+    clear: both;
+    padding: 0 0 15px 0;
+    font-family: lato; font-weight: 400;
+    font-size: 1.125rem;
+    color: #454952;
+    line-height: 1.25;
+}
+
+table#trade-details-table-info tbody tr td span.buy-zone-message {
+    background-color: #ccccff;
+    font-weight: bold;
+    border-radius: 0px;
+    padding: 0 10px 0 10px;
+    margin: 3px 0 0 0;
+    display: inline-block;
+}
+
+table#trade-details-table-info tbody tr td span.short-zone-message {
+    background-color: #ccccff;
+    font-weight: bold;
+    border-radius: 0px;
+    padding: 0 10px 0 10px;
+    margin: 3px 0 0 0;
+    display: inline-block;
+}
+
+p.time-stamp {
+    margin: 0 0 0 0;
+    font-size: 0.6875rem;
+    border: solid 1px #c6c6c6;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+div.trade-details-calculator-section {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+table#trade-details-table-calculator {
+    padding: 10px 0 0 0;
+    margin: 0 0 0 0;
+    background-color: #ffffff;
+    border: none;
+}
+
+table#trade-details-table-calculator tbody tr {
+    background-color: #ffffff;
+}
+
+table#trade-details-table-calculator tbody tr th {
+    text-align: left;
+    float: left;
+    clear: both;
+    padding: 0 0 5px 0;
+    font-family: lato; font-weight: 900;
+    font-size: 1rem;
+    color: #000;
+}
+
+table#trade-details-table-calculator tr td {
+    float: left;
+    clear: both;
+    padding: 0 0 10px 0;
+    font-family: lato; font-weight: 400;
+    font-size: 0.9375rem;
+    color: #454952;
+    line-height: 1.25;
+}
+
+table#trade-details-table-calculator tr td img {
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+table#trade-details-table-calculator tr td span.position-size-calculator {
+    float: left;
+    padding: 0 0 0 0;
+    font-family: lato; font-weight: 900;
+    font-size: 0.9375rem;
+    color: #454952;
+}
+
+/* Position Size Calculator Modal CSS starts here! */
+
+div#position-size-calculator-modal.reveal-modal {
+    margin: 0px 0px 0 15px;
+    width: 330px;
+    padding: 10px;
+    top: 300px;
+    border-radius: 10px;
+}
+
+div#position-size-calculator-modal.reveal-modal img {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+div#position-size-calculator-modal.reveal-modal span.position-size-calculator-heading {
+    font-family: lato; font-weight: 900;
+    font-size: 0.875rem;
+    color: #454952;
+    padding: 15px 15px 15px 15px;
+    float: left;
+}
+
+div#position-size-calculator-modal.reveal-modal hr {
+    margin: 10px 0 0 0;
+    border: solid #959394 1px;
+}
+
+div#position-size-calculator-modal.reveal-modal.open {
+    margin: 0px 0px 0 15px;
+    width: 330px;
+    padding: 10px;
+    top: 300px;
+    border-radius: 10px;
+}
+
+div#position-size-calculator-modal.reveal-modal.open img {
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+div#position-size-calculator-modal.reveal-modal.open span.position-size-calculator-heading {
+    font-family: lato; font-weight: 900;
+    font-size: 0.875rem;
+    color: #454952;
+    padding: 15px 15px 0px 15px;
+    float: left;
+}
+
+div#position-size-calculator-modal.reveal-modal.open hr {
+    margin: 10px 0 0 0;
+    border: solid #959394 1px;
+}
+
+div#position-size-calculator-modal.reveal-modal.open span.short-trade-label {
+    display: inline-block;
+    width: 50px;
+    height: 15px;
+    background-image: url(images/short-label.png);
+    background-size: 50px 15px;
+    margin: 0 0 -2px 15px;
+}
+
+table#position-size-calculator {
+    width:100%;
+    background: none;
+    border: none;
+    margin: 0 0 10px 0;
+}
+
+table#position-size-calculator tbody tr {
+    background: none;
+}
+
+table#position-size-calculator tbody tr th {
+    font-family: lato; font-weight: 400;
+    font-size: 0.9375rem;
+    color: #000;
+}
+
+table#position-size-calculator tbody tr td {
+    padding: 0;
+    margin: 0;
+}
+
+table#position-size-calculator tbody tr td input {
+    padding: 0 10px 0 20px;
+    margin: 0 0 0 60px;
+    height: 30px;
+    width: 120px;
+}
+
+table#position-size-calculator tbody tr td input:focus {
+    border-color: #333399;
+}
+
+table#position-size-calculator tbody tr td input.dollar-sign:focus {
+    background-image: url(images/dollar-icon.png);
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: 10px 10px;
+    transition: border-color 0.15s linear;
+}
+
+table#position-size-calculator-results {
+    width:100%;
+    background: none;
+    border: none;
+}
+
+table#position-size-calculator-results tbody tr {
+    background: none;
+}
+
+table#position-size-calculator-results tbody tr td {
+    text-align: right;
+}
+
+figure#trade-details-chart {
+    margin: 0;
+    padding: 0;
+}
+
+figure#trade-details-chart img {
+    width:100%;
+    height:100%;
+}
+
+p.powered-by-marketsmith {
+    padding: 5px 10px 0 0;
+    margin: 0;
+    text-align: right;
+    color: #808080;
+    font-size: 0.875rem;
+    float: right;
+}
+
+p.powered-by-marketsmith span.marketsmith-color {
+    color: #ffa500;
+}
+
+ul#trade-details-chart-legend {
+    padding: 0 0 0 0;
+    margin: 12px 0 0 0;
+    float: left;
+}
+
+ul#trade-details-chart-legend li {
+    display: inline;
+    font-size: 0.6875rem;
+    padding: 0 10px 0 10px;
+    font-family: lato; font-weight: 400;
+    float: left;
+    line-height: 1.1;
+}
+
+ul#trade-details-chart-legend li.five-day {
+    color: #000;
+    padding-left: 0;
+}
+
+ul#trade-details-chart-legend li.five-day span.five-day-legend-block {
+    background-color:#000;
+    width: 10px;
+    height: 10px;
+    display: block;
+    float: left;
+    padding: 0 0 0 0;
+    margin: 0px 5px 0 0;
+}
+
+ul#trade-details-chart-legend li.ten-day {
+    color: #006600;
+}
+
+ul#trade-details-chart-legend li.ten-day span.ten-day-legend-block {
+    background-color:#006600;
+    width: 10px;
+    height: 10px;
+    display: block;
+    float: left;
+    padding: 0 0 0 0;
+    margin: 0px 5px 0 0;
+}
+
+ul#trade-details-chart-legend li.fifty-day {
+    color: #990000;
+}
+
+ul#trade-details-chart-legend li.fifty-day span.fifty-day-legend-block {
+    background-color:#990000;
+    width: 10px;
+    height: 10px;
+    display: block;
+    float: left;
+    padding: 0 0 0 0;
+    margin: 0px 5px 0 0;
+}
+
+ul#trade-details-chart-legend li.relative-strength {
+    color: #0033cc;
+}
+
+ul#trade-details-chart-legend li.relative-strength span.relative-strength-legend-block {
+    background-color:#0033cc;
+    width: 10px;
+    height: 10px;
+    display: block;
+    float: left;
+    padding: 0 0 0 0;
+    margin: 0px 5px 0 0;
+}
+
+div.show-for-small-only p.powered-by-marketsmith {
+    display: inline-block;
+    float: left;
+    clear: left;
+} 
+
+/*************************************/
+/*************************************/
+/**** Past Trades CSS starts here!****/
+/*************************************/
+/*************************************/
+
+
+
+table#past-trades.full-width {
+    background-color: #ffffff;
+    border: none;
+    border-collapse: collapse;
+    margin: 10px 0 0 0;
+}
+
+table#past-trades.full-width thead tr {
+    background-color: #ffffff;
+    border-bottom: solid #c6c6c6 1px;
+}
+
+table#past-trades.full-width thead tr th {
+    font-family: lato; font-weight: 700;
+    font-size: 0.9125rem;
+    color: #454952;
+    padding: 0 0 10px 5px;
+}
+
+table#past-trades.full-width thead tr th a {
+    color: #454952;
+}
+
+
+
+table#past-trades.full-width tbody tr {
+    background-color: #ffffff;
+}
+
+/*table#past-trades.full-width tbody tr:hover {
+    background-color: #e3e1e7;
+}*/
+
+table#past-trades.full-width tbody tr th {
+    font-family: lato; font-weight: 900;
+    font-size: 0.875rem;
+    color: #454952;
+    padding: 5px;
+}
+
+table#past-trades.full-width tbody tr td {
+    font-family: lato; font-weight: 400;
+    font-size: 0.9125rem;
+    color: #444444;
+    padding: 5px;
+}
+
+table#past-trades.full-width tbody tr th a {
+    color: #454952;
+}
+
+table#past-trades.full-width tbody tr td span.new-trade-label {
+    background-color: #0099cc;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 1px 7px 1px 7px;
+    position: relative;
+    right: 175px;
+    font-size: 0.675rem;
+}
+
+table#past-trades.full-width tbody tr td span.short-trade-label {
+    display: inline-block;
+    width: 50px;
+    height: 15px;
+    background-image: url(images/short-label.png);
+    background-size: 50px 15px;
+    margin: 0 0 -2px 5px;
+}
+
+table#past-trades tbody tr td.trade-red-arrow {
+    color: #ff0000;
+    /*background-image: url(../../images/red-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 12px 12px;*/
+    /* background-position: 39% 49%;  This used to be 11% by 49%. */
+    /* padding: 0 10px 0 30px; */
+    /*text-align: center;*/ /* The text used to be aligned left */
+    background-origin: padding-box;
+    background-position: 15% 50%;
+    width: 100px;
+}
+
+table#past-trades tbody tr td.trade-red-arrow img {
+    margin: 0 4px 3px 0;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+}
+
+table#past-trades tbody tr td.trade-red {
+    color: #ff0000;
+}
+
+table#past-trades tbody tr td.trade-green-arrow {
+    color: #009900;
+    /*background-image: url(../../images/green-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 12px 12px;*/
+    /*padding: 0 10px 0 30px;*/
+    /*text-align: center;*/
+    background-origin: padding-box;
+    background-position: 15% 50%;
+    width: 100px;
+}
+
+table#past-trades tbody tr td.trade-green-arrow img {
+    margin: 0 4px 4px 0;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+}
+
+table#past-trades tbody tr td.trade-green {
+    color: #009900;
+}
+
+ul.pagination {
+    margin: 5px 0 0 0;
+}
+
+ul.pagination li.arrow {
+    font-size: 1.2rem;
+}
+
+ul.pagination li.arrow.unavailable {
+    font-size: 1.2rem;
+}
+
+/* Past Trades round chart CSS code starts here! */
+
+.chart {
+    position: relative;
+    width: 225px;
+    height: 225px;
+    margin: 0;
+}
+
+div#doughnutChart.chart {
+    margin: 0 0 0 60px;
+    padding: 10px 0 0 0px;
+    float: left;
+    /*border: solid red;*/
+}
+
+table#past-trades-doughnut-chart-table {
+    float: left;
+    padding: 60px 0 0 0px;
+    margin: 0 0 0 40px;
+    border: none;
+}
+
+table#past-trades-doughnut-chart-table caption {
+    caption-side: bottom;
+    font-family: lato; font-weight: 300;
+    font-size: 0.6875rem;
+    color: #454952;
+    text-align: right;
+    /*border: solid green;*/
+}
+
+table#past-trades-doughnut-chart-table tbody {
+    border-collapse: collapse;
+}
+
+table#past-trades-doughnut-chart-table tbody tr {
+    background-color: #ffffff;
+}
+
+table#past-trades-doughnut-chart-table tbody tr th {
+    padding: 15px;
+}
+
+table#past-trades-doughnut-chart-table tbody tr th.past-trades-doughnut-chart-win {
+    color: #009900;
+    font-size: 1.125rem;
+    font-family: lato; font-weight: 300;
+}
+
+table#past-trades-doughnut-chart-table tbody tr th.past-trades-doughnut-chart-loss {
+    color: #ff0000;
+    font-size: 1.125rem;
+    font-family: lato; font-weight: 300;
+}
+
+table#past-trades-doughnut-chart-table tbody tr td {
+    color: #454952;
+    font-size: 1.125rem;
+    font-family: lato; font-weight: 700;
+}
+
+table#past-trades-doughnut-chart-table tbody tr td.green-legend-box {
+    width: 20px;
+    height: 20px;
+    background-color: #009900;
+    display: block;
+    margin: 15px 0 0 0;
+    padding: 0;
+}
+
+table#past-trades-doughnut-chart-table tbody tr td.red-legend-box {
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    display: block;
+    margin: 15px 0 0 0;
+    padding: 0;
+}
+
+.doughnutTip {
+    position: absolute;
+    min-width: 30px;
+    max-width: 300px;
+    padding: 5px 15px;
+    border-radius: 1px;
+    background: rgba(0,0,0,.8);
+    color: #ddd;
+    font-size: 17px;
+    text-shadow: 0 1px 0 #000;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: .06em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    pointer-events:none;
+    :after {
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        content: "";
+        height: 0;
+        margin: 0 0 0 -6px;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-top: 6px solid rgba(0,0,0,.7);
+        line-height: 0;
+    }
+}
+.doughnutSummary {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #d5d5d5;
+    text-align: center;
+    text-shadow: 0 -1px 0 #111;
+    cursor: default;
+    display: none;
+}
+.doughnutSummaryTitle {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -27%;
+    font-size: 22px;
+    letter-spacing: .06em;
+}
+.doughnutSummaryNumber {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -15%;
+    font-size: 30px;
+}
+.chart path:hover { opacity: 0.65; }
+
+/* Horizontal Bar Graph CSS starts here! */
+
+.horz-bars {
+    margin: 6px 0 0 6em;
+    float: left;
+}
+
+.horz-bars ul.data {
+    border-left: 1px solid #c6c6c6;
+    /*width: 240px;*/
+    width: 180px;
+    height: 124px;
+    list-style-type: none;
+    padding: 0;
+    margin: 74px 0 0 0; /***/
+}
+
+.horz-bars ul.data li {
+    font-size: 11pt;
+    margin:0;
+    padding: 26px 0 0 0; /***/
+}
+
+.horz-bars ul.data li .bar-winner {
+    background-color: #009900;
+    float: left;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.horz-bars ul.data li .bar-loser {
+    background-color: #ff0000;
+    float: right;
+    height: 25px;
+    /*margin-right: 240px;*/
+    margin-right: 180px;
+    padding: 0;
+}
+
+.horz-bars .winner-value {
+    float: left;
+    padding: 0 0 0 5px;  
+    display: none;
+}
+
+.horz-bars .loser-value {
+    float: left;
+    padding: 0 0 0 5px;
+    display: none;
+}
+
+/* Bar Chart Table CSS starts here */
+
+table#past-trades-bar-chart-table {
+    float: left;
+    padding:95px 0 0 0;
+    margin: 0;
+    border: none;
+}
+
+table#past-trades-bar-chart-table caption {
+    caption-side: bottom;
+    font-family: lato; font-weight: 300;
+    font-size: 0.6875rem;
+    color: #454952;
+    text-align: right;
+    /*border: solid green;*/
+}
+
+table#past-trades-bar-chart-table tbody {
+    border-collapse: collapse;
+}
+
+table#past-trades-bar-chart-table tbody tr {
+    background-color: #ffffff;
+}
+
+table#past-trades-bar-chart-table tbody tr th {
+    padding: 15px;
+}
+
+table#past-trades-bar-chart-table tbody tr th.past-trades-bar-chart-win {
+    color: #009900;
+    font-size: 1.125rem;
+    font-family: lato;
+    font-weight: 300;
+    padding-left: 0;
+}
+
+.past-trades-bar-chart-win {
+    color: #009900 ;
+    font-size: 1.125rem;
+    font-family: lato; font-weight: 300;
+    float: left;
+    display: inline-block;
+    /*width: 20em;*/ /***/
+    padding-left: 1.5em;
+    /*margin-top: -1.5em;*/ /***/
+}
+
+table#past-trades-bar-chart-table tbody tr th.past-trades-bar-chart-loss {
+    color: #ff0000;
+    font-size: 1.125rem;
+    font-family: lato;
+    font-weight: 300;
+    padding-left: 0;
+}
+
+.past-trades-bar-chart-loss {
+    color: #ff0000 ;
+    font-size: 1.125rem;
+    font-family: lato; font-weight: 300;
+    float: left;
+    display: inline-block;
+    /* width:20em;*/ /*****/
+    padding-left: 1.5em;
+    /*margin-top: -1.5em;*/ /****/
+}
+
+table#past-trades-bar-chart-table tbody tr td, .barNum {
+    color: #454952 ;
+    font-size: 1.125rem;
+    font-family: lato; font-weight: 700;
+    margin: 0 0 0 10px;
+}
+
+.past-trades-charts-mobile p {
+    margin: 0;
+    text-align: center;
+    font-family: lato;
+    font-weight: 500;
+    color: #454952;
+    font-size: 1.1875rem;
+}
+
+/* CSS code for the Past Trades header and search & dropdown fieldss starts here! */
+
+div#past-trades-chart-header.row span.past-trades-heading {
+    font-family: lato; font-weight: 700;
+    font-size: 1.25rem;
+    color: #454952;
+    float: left;
+}
+
+form#past-trades-search-fields {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+form#past-trades-search-fields select {
+    width: 150px;
+    height: 30px;
+    float: right;
+    margin: 0 25px 0 0;
+    padding: 0 0 0 30px;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+}
+
+form#past-trades-search-fields input {
+    float: right;
+    width: 150px;
+    height: 30px;
+    padding: 0 20px 0 20px;
+    margin: 0 0 0 0;
+    border-radius: 15px;
+    background-image: url(images/search-icon.png);
+    background-repeat: no-repeat;
+    background-size: 9px 9px;
+    background-position: 130px 10px;
+    background-color: #f0f0f0;
+}
+
+::-webkit-input-placeholder { /* For WebKit browsers */
+    color: #454952;
+    font-family: lato; font-weight: 400;
+    text-align: center;
+}
+
+:-moz-placeholder { /* For Mozilla Firefox 4 to 18 */
+    color: #454952;
+    font-family: lato; font-weight: 400;
+    text-align: center;
+}
+
+::-moz-placeholder { /* For Mozilla Firefox 19+ */
+    color: #454952;
+    font-family: lato; font-weight: 400;
+    text-align: center;
+}
+
+:-ms-input-placeholder { /* For Internet Explorer 10+ */
+    color: #454952;
+    font-family: lato; font-weight: 400;
+    text-align: center;
+}
+
+/* Custom Select Dropdown Form CSS Starts Here! */
+
+.past-trades-custom-dropdown {
+    float: right;
+    padding: 0;
+    margin: 0 10% 0 0;
+}
+
+.past-trades-custom-dropdown .dropcontainer .dropdownvisible li a {
+    color: #454952;
+}
+
+.dropcontainer {
+    position:relative;
+    font-size: 16px;
+    color: #777;
+} 
+
+.trigger {
+    color: #777;
+    padding: 2px 0 0 30px;
+    font-size: 16px;
+    width: 150px;
+    height: 30px;
+    background: #f0f0f0 url(images/arrow-down.png) 85% center no-repeat;
+    background-size: 11px 9px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; 
+    transition: all 0.5s ease;
+}
+
+.trigger:hover {
+    color: #777;
+    background: #f5f5f5 url(images/arrow-down.png) 85% center no-repeat;
+    background-size: 11px 9px;
+}
+
+.activetrigger {
+    color: #777;
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+    background: #f5f5f5 url(images/arrow-down.png) 85% center no-repeat;
+    background-size: 11px 9px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.activetrigger:hover {
+    background: #f5f5f5 url(images/arrow-up.png) 85% center no-repeat;
+    background-size: 11px 9px;
+    color: #777;
+}
+
+.activetrigger:active {
+    background: #f5f5f5 url(images/arrow-up.png) 85% center no-repeat;
+    background-size: 11px 9px;
+    color: #777;
+}
+
+.dropcontainer ul {
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background: #fff;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    width: 150px;
+    z-index: 100;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.dropcontainer ul li {
+    padding: 5px;
+    -webkit-transition: all 0.5s ease; 
+    -moz-transition: all 0.5s ease; 
+    -o-transition: all 0.5s ease; 
+    transition: all 0.5s ease;
+    color: #454952;
+}
+
+.dropcontainer ul li:hover {
+    background: #f5f5f5;
+    outline: none;
+}
+
+.dropcontainer ul li:first-child {
+    display: none;
+}
+
+.dropcontainer ul li:last-child {
+    border-bottom: none;
+}
+
+.dropdownhidden {
+    display: none;
+}
+
+.dropdownvisible {
+    height: auto;
+}
+
+form#past-trades-search-fields a {
+    float: right;
+}
+
+form#past-trades-search-fields a img {
+    width: 20px;
+    height: 20px;
+}
+
+input#searchInput.searchText {
+    margin: 15px 0 0 0;
+}
+
+ul.pagination li.current a {
+    background-color: #563d93;
+}
+
+/*************************************/
+/*************************************/
+/**** About Page CSS Starts Here *****/
+/*************************************/
+/*************************************/
+
+.swing {
+    font-family: lato;
+    font-weight: 600;
+}
+
+.about-heading {
+    /*border: solid blue;*/
+}
+
+.about-heading h1 {
+    font-family: lato;
+    font-weight: 200;
+    text-align: center;
+    color: #563d93;
+    font-size: 3rem;
+    margin: 0 0 35px 0;
+}
+
+.about-heading p {
+    font-family: lato;
+    font-weight: 200;
+    color: #666666;
+    font-size: 1.2rem;
+}
+
+.about-heading-image {
+    /*border: solid red;*/
+}
+
+.about-heading-image img {
+    width: 400px;
+    height: 200px;
+}
+
+.about-quote {
+    background-color: #563d93;
+    padding: 20px 0 20px 0;
+    margin: 0 0 70px 0;
+}
+
+.about-quote p {
+    color: #eeeeee;
+    text-align: center;
+    font-family: lato;
+    font-weight: 100;
+    font-size: 1.2rem;
+    margin: 0 40px 0 40px;
+}
+
+.about-investing-section {
+    margin: 0 50px 0 50px;
+}
+
+.about-investing-section h3 {
+    text-align: center;
+    font-family: lato;
+    font-weight: 900;
+    color: #000000;
+    font-size: 1.6rem;
+}
+
+.about-investing-section h4 {
+    font-family: lato;
+    font-weight: 700;
+    color: #000000;
+    margin: 30px 0 5px 0;
+}
+
+.about-investing-section p {
+    font-family: lato;
+    font-weight: 200;
+    color: #666666;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.about-investing-section ul {
+    margin: 0 0 0 2rem;
+}
+
+.about-investing-section ul li {
+    font-family: lato;
+    font-weight: 100;
+    color: #666666;
+}
+
+.about-team-section {
+    margin: 20px 50px 0 50px;
+}
+
+.about-team-section h4 {
+    text-align: center;
+    font-family: lato;
+    font-weight: 900;
+    color: #000000;
+    margin: 0 0 40px 0;
+    font-size: 1.6rem;
+}
+
+.about-team-section p {
+    font-family: lato;
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: #666666;
+}
+
+.about-team-section p.first-paragraph {
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    color: #000000;
+}
+
+.about-team {
+    /*border: solid black;*/
+}
+
+.about-team img {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.about-team h5 {
+    font-family: lato;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.about-team p {
+    font-family: lato;
+    font-weight: 200;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    color: #666666;
+}
+
+.about-team-section-2 {
+    /*border: solid orange;*/
+}
+
+.about-team-section-2 h3 {
+    text-align: center;
+    font-family: lato;
+    font-weight: 700;
+    color: #000000;
+}
+
+.about-team-section-2 p {
+    text-align: center;
+    font-family: lato;
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: #666666;
+}
+
+.about-concierge-section {
+    margin: 0 50px 0 50px;
+}
+
+.about-concierge-heading {
+    margin: 60px 0 60px 0;
+}
+
+.about-concierge-heading h3 {
+    text-align: center;
+    font-family: lato;
+    font-weight: 200;
+    color: #000000;
+    font-size: 2rem;
+}
+
+.about-concierge-section-left {
+    width: 250px;
+    float: right;
+    margin: 0 40px 0 0;
+}
+
+.about-concierge-section-left img {
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
+.about-concierge-section-left h4 {
+    font-family: lato;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #563d93;
+}
+
+.about-concierge-section-left p {
+    font-family: lato;
+    font-weight: 200;
+    font-size: 1rem;
+    display: inline-block;
+    color: #666666;
+    margin: 0 30px 0 0;
+}
+
+.about-concierge-section-right {
+    width: 250px;
+    float: left;
+    margin: 0 0 0 40px;
+}
+
+.about-concierge-section-right img {
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
+.about-concierge-section-right h4 {
+    font-family: lato;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #563d93;
+}
+
+.about-concierge-section-right p {
+    font-family: lato;
+    font-weight: 200;
+    font-size: 1rem;
+    display: inline-block;
+    color: #666666;
+    margin: 0 30px 0 0;
+}
+
+/*************************************/
+/*************************************/
+/**** Concierge CSS starts here!****/
+/*************************************/
+/*************************************/
+
+img.concierge-phone-icon {
+    margin: 15px 0 0 0;
+    width: 100%;
+    height: 100%;
+    max-width: 33px;
+    max-height: 36px;
+}
+
+.concierge-call h3 {
+    font-family: lato;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #000000;
+    margin: 15px 0 0 0;
+}
+
+.concierge-call p {
+    font-family: lato;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: #666666;
+}
+
+img.concierge-email-icon {
+    margin: 15px 0 0 0;
+    width: 100%;
+    height: 100%;
+    max-width: 29px;
+    max-height: 24px;
+}
+
+.concierge-email h3 {
+    font-family: lato;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #000000;
+    margin: 15px 0 0 0;
+}
+
+.concierge-email p {
+    font-family: lato;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: #666666;
+}
+
+.concierge-email a {
+    color: #039;
+}
+
+.email-button {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.9;
+    text-shadow: rgba(0, 0, 0, 0.9) 0px 1px 2px;
+    background: white;
+    border: 1px solid grey;
+    border-radius: 4px;
+    transition: all 0.1s linear;
+    width: 85%;
+    font-size: 1rem;
+    height: 2.5rem;
+    padding-top: 0.3rem;
+    color: black;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(255, 255, 255, 0.25) 0px 1px 0px, inset rgba(0, 0, 0, 0.25) 0px 0px 0px, inset rgba(255, 255, 255, 0.03) 0px 20px 0px, inset rgba(0, 0, 0, 0.15) 0px -20px 20px, inset rgba(255, 255, 255, 0.05) 0px 20px 20px;
+}
+
+.email-button-shine {
+    display: block;
+    position: relative;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    padding: 0px 12px;
+    top: -12px;
+    left: -24px;
+    height: 1px;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/***************** Recent Alerts CSS starts here ******************/
+/******************************************************************/
+/******************************************************************/
+/******************************************************************/
+
+table#recent-alerts.full-width {
+    background-color: #ffffff;
+    border: none;
+    border-collapse: collapse;
+    margin: 10px 0 0 0;
+}
+
+table#recent-alerts.full-width thead tr {
+    background-color: #ffffff;
+    border-bottom: solid #c6c6c6 1px;
+}
+
+table#recent-alerts.full-width thead tr th {
+    font-family: lato; font-weight: 700;
+    font-size: 0.9125rem;
+    color: #454952;
+    padding: 0 0 10px 5px;
+}
+
+table#recent-alerts.full-width thead tr th.date {
+    width: 12%;
+}
+
+table#recent-alerts.full-width thead tr th.symbol {
+    width: 18%;
+}
+
+table#recent-alerts.full-width thead tr th.company-name {
+    width: 22%;
+}
+
+table#recent-alerts.full-width thead tr th a {
+    color: #454952;
+}
+
+
+
+table#recent-alerts.full-width tbody tr {
+    background-color: #ffffff;
+}
+
+/*table#recent-alerts.full-width tbody tr:hover {
+    background-color: #e3e1e7;
+}*/
+
+table#recent-alerts.full-width tbody tr th {
+    font-family: lato; font-weight: 900;
+    font-size: 0.875rem;
+    color: #454952;
+    padding: 5px;
+}
+
+table#recent-alerts.full-width tbody tr td {
+    font-family: lato; font-weight: 400;
+    font-size: 0.9125rem;
+    color: #444444;
+    padding: 5px;
+}
+
+table#recent-alerts.full-width tbody tr th a {
+    color: #454952;
+}
+
+table#recent-alerts.full-width tbody tr td span.new-trade-label {
+    background-color: #0099cc;
+    border-radius: 20px;
+    color: #ffffff;
+    padding: 1px 7px 1px 7px;
+    position: relative;
+    right: 175px;
+    font-size: 0.675rem;
+}
+
+table#recent-alerts.full-width tbody tr td span.short-trade-label {
+    display: inline-block;
+    width: 50px;
+    height: 15px;
+    background-image: url(images/short-label.png);
+    background-size: 50px 15px;
+    margin: 0 0 -2px 5px;
+}
+
+table#recent-alerts tbody tr td.trade-red-arrow {
+    color: #ff0000;
+    /*background-image: url(../../images/red-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 12px 12px;*/
+    /* background-position: 39% 49%;  This used to be 11% by 49%. */
+    /* padding: 0 10px 0 30px; */
+    /*text-align: center;*/ /* The text used to be aligned left */
+    background-origin: padding-box;
+    background-position: 15% 50%;
+    width: 100px;
+}
+
+table#recent-alerts tbody tr td.trade-red-arrow img {
+    margin: 0 4px 3px 0;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+}
+
+table#recent-alerts tbody tr td.trade-red {
+    color: #ff0000;
+}
+
+table#recent-alerts tbody tr td.trade-green-arrow {
+    color: #009900;
+    /*background-image: url(../../images/green-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: 1.014em 1.007em;
+    background-size: 12px 12px;*/
+    /*padding: 0 10px 0 30px;*/
+    /*text-align: center;*/
+    background-origin: padding-box;
+    background-position: 15% 50%;
+    width: 100px;
+}
+
+table#recent-alerts tbody tr td.trade-green-arrow img {
+    margin: 0 4px 4px 0;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+}
+
+table#recent-alerts tbody tr td.trade-green {
+    color: #009900;
+}
+
+ul.pagination {
+    margin: 5px 0 0 0;
+}
+
+ul.pagination li.arrow {
+    font-size: 1.2rem;
+}
+
+ul.pagination li.arrow.unavailable {
+    font-size: 1.2rem;
+}
+
+/* CSS code for the Past Trades header and search & dropdown fields starts here! */
+
+div#recent-alerts-chart-header.row span.recent-alerts-heading {
+    font-family: lato; 
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #454952;
+    float: left;
+}
+
+form#recent-alerts-search-fields {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+form#recent-alerts-search-fields select {
+    width: 150px;
+    height: 30px;
+    float: right;
+    margin: 0 25px 0 0;
+    padding: 0 0 0 30px;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+}
+
+form#recent-alerts-search-fields input {
+    float: right;
+    width: 150px;
+    height: 30px;
+    padding: 0 20px 0 20px;
+    margin: 0 0 0 0;
+    border-radius: 15px;
+    background-image: url(images/search-icon.png);
+    background-repeat: no-repeat;
+    background-size: 9px 9px;
+    background-position: 130px 10px;
+    background-color: #f0f0f0;
+}
+
+::-webkit-input-placeholder { /* For WebKit browsers */
+    color: #454952;
+    font-family: lato; font-weight: 400;
+    text-align: center;
+}
+
+:-moz-placeholder { /* For Mozilla Firefox 4 to 18 */
+    color: #454952;
+    font-family: lato; font-weight: 400;
+    text-align: center;
+}
+
+::-moz-placeholder { /* For Mozilla Firefox 19+ */
+    color: #454952;
+    font-family: lato; font-weight: 400;
+    text-align: center;
+}
+
+:-ms-input-placeholder { /* For Internet Explorer 10+ */
+    color: #454952;
+    font-family: lato; font-weight: 400;
+    text-align: center;
+}
+
+/* Custom Select Dropdown Form CSS Starts Here! */
+
+.recent-alerts-custom-dropdown {
+    float: right;
+    padding: 0;
+    margin: 0 10% 0 0;
+}
+
+.recent-alerts-custom-dropdown .dropcontainer .dropdownvisible li a {
+    color: #454952;
+}
+
+.dropcontainer {
+    position:relative;
+    font-size: 16px;
+    color: #777;
+} 
+
+.trigger {
+    color: #777;
+    padding: 2px 0 0 30px;
+    font-size: 16px;
+    width: 150px;
+    height: 30px;
+    background: #f0f0f0 url(images/arrow-down.png) 85% center no-repeat;
+    background-size: 11px 9px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; 
+    transition: all 0.5s ease;
+}
+
+.trigger:hover {
+    color: #777;
+    background: #f5f5f5 url(images/arrow-down.png) 85% center no-repeat;
+    background-size: 11px 9px;
+}
+
+.activetrigger {
+    color: #777;
+    padding: 10px;
+    font-size: 16px;
+    width: 150px;
+    background: #f5f5f5 url(images/arrow-down.png) 85% center no-repeat;
+    background-size: 11px 9px;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.activetrigger:hover {
+    background: #f5f5f5 url(images/arrow-up.png) 85% center no-repeat;
+    background-size: 11px 9px;
+    color: #777;
+}
+
+.activetrigger:active {
+    background: #f5f5f5 url(images/arrow-up.png) 85% center no-repeat;
+    background-size: 11px 9px;
+    color: #777;
+}
+
+.dropcontainer ul {
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background: #fff;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    width: 150px;
+    z-index: 100;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.dropcontainer ul li {
+    padding: 5px;
+    -webkit-transition: all 0.5s ease; 
+    -moz-transition: all 0.5s ease; 
+    -o-transition: all 0.5s ease; 
+    transition: all 0.5s ease;
+    color: #454952;
+}
+
+.dropcontainer ul li:hover {
+    background: #f5f5f5;
+    outline: none;
+}
+
+.dropcontainer ul li:first-child {
+    display: none;
+}
+
+.dropcontainer ul li:last-child {
+    border-bottom: none;
+}
+
+.dropdownhidden {
+    display: none;
+}
+
+.dropdownvisible {
+    height: auto;
+}
+
+form#recent-alerts-search-fields a {
+    float: right;
+}
+
+form#recent-alerts-search-fields a img {
+    width: 20px;
+    height: 20px;
+}
+
+input#searchInput.searchText {
+    margin: 15px 0 0 0;
+}
+
+ul.pagination li.current a {
+    background-color: #563d93;
+}
+
+
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+/*************************************** MEDIA QUERIES START HERE! ********************************************/
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+
+@media only screen and (max-width: 40em) {
+
+    /* These are (for the most part) global styles that affect all Swing Trader Pages on mobile. CSS Starts Here! */
+
+    /* This css code keeps the off-canvas menu sticky so that it does not scroll with main content on the page. */
+    /* Even when I scroll down on the main content of a page, the off-canvas menu will always appear at the top of the menu. */
+
+    .off-canvas-wrap {
+        /*height: 100%;*/
+    }
+
+    .off-canvas-wrap .inner-wrap {
+        height: 100%;
+        width: 100%;
+    }
+
+    .wrapper {
+        padding-top: 45px;
+        /*overflow-y: auto;
+        height: 100%*/ /* This caused the off-canvas menu from appearing properly. Temporarily commented out until further notice */
+    }
+    /* End sticky off-canvas CSS code. Note: margin-top: 45px; is not originally part of this code. */
+
+    /*This controls the appearance of the banner notifications on mobile */
+    .alert-box {
+        z-index: 2;
+        min-height: 45px;
+        position: fixed;
+        width: 100%;
+    }
+    /* End banner notifications on mobile */
+
+    .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        color: #ff0000;
+    }
+
+    .ellipsis.multiline {
+        white-space: normal;
+        color: #0000ff;
+    }
+
+    .trade-data {
+        display: block;
+        height: 51px;
+        padding-bottom: 0;
+    }
+
+    .no-padding-right {
+        padding-right: 0;
+    }
+
+    .swing-trader-mobile-logo {
+        font-family: lato; font-weight: 700;
+        color: #663399;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    header {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        /*border: solid blue;*/
+        background-color: #808080;
+        width: 100%;
+        height: 45px;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+
+    header h1.logo {
+        margin: 10px 0 0 0;
+        padding: 0 0 0 0;
+        text-align: center;
+        height: 25px;
+    }
+
+    header h1.logo a img {
+        width: 200px;
+        height: auto;
+    }
+
+    header h1.logo span.logo-tagline {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        display: none;
+    }
+
+    header h1.logo span.logo-tagline a img {
+        margin: 0 0 0 0;
+        height: 10px;
+        width: auto;
+    }
+
+    h1.header-mobile {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        text-align: center;
+        display: inline;
+    }
+
+    h1.header-mobile a {
+        text-align: center;
+        font-family: lato; font-weight: 100;
+        color: #ffffff;
+        font-size: 1.2875rem;
+    }
+
+    nav#main-nav {
+        /*border: solid blue;*/
+        width: 100%;
+        margin: 10px 0 0 0;
+
+    }
+
+    nav#main-nav ul {
+        margin:0;
+        padding:0px;
+        height: auto;
+        list-style-type: none;
+        text-align: center;
+    }
+
+    nav#main-nav li {
+        display: inline;
+        padding: 0 5px 0 0;
+        width:100%;
+    }
+
+    nav#main-nav ul li a {
+        font-family: lato; font-weight: 300;
+        font-size: 0.875rem;
+        color: #777;
+    }
+
+    nav#main-nav ul li a:hover {
+        color: #333399;
+    }
+
+    /* Start Off-Canvas CSS */
+
+    nav.tab-bar {
+        background-color: #563d93;
+    }
+
+    nav.tab-bar section.left-small {
+        border: none;
+    }
+
+    /* This controls the color of the hamburger menu icon on Foundation Offcanvas */
+
+    .tab-bar .menu-icon span::after {
+        box-shadow: 0 0 0 1px #ffffff, 0 7px 0 1px #ffffff, 0 14px 0 1px #ffffff;
+    }
+
+    aside.left-off-canvas-menu {
+        background-color: #eeeeee;
+    }
+
+    ul.off-canvas-list li {
+        background-color: #ffffff;
+    }
+
+    ul.off-canvas-list li a {
+        color: #454952;
+    }
+
+    ul.off-canvas-list li a:hover {
+        background-color: #777777;
+        color: #ffffff;
+    }
+
+    /* End Off-Canvas CSS */
+
+    /* Global Mobile CSS ends here! */
+
+    /*****************Current Trades Media Query CSS Starts Here*******************/
+
+    div.show-for-small-only a.right-off-canvas-toggle.market-action-mobile {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    div.show-for-small-only a.right-off-canvas-toggle.market-action-mobile img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .trade-setup-mobile {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+    }
+
+    .trade-setup-mobile .panel {
+        border: none;
+        border-radius: 0;
+        padding-top: 10px;
+    }
+
+    .current-trades-mobile {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+    }
+
+    .current-trades-mobile .panel {
+        border: none;
+        border-radius: 0;
+    }
+
+    .past-trades-mobile {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+    }
+
+    .past-trades-mobile .panel {
+        border: none;
+        border-radius: 0;
+    }
+
+    #trade-setup-header h3 {
+        font-size: 1.175rem;
+    }
+
+    h4.trade-heading {
+        display: inline-block;
+    }
+
+    h4 span.stock-symbol a {
+        color: #000000;
+    }
+
+
+    #trade-setup-header ul#trade-setup-nav li {
+        font-size: 0.875rem;
+    }
+
+    #trade-setup-header ul#trade-setup-nav li a {
+        font-size: 0.875rem;
+    }
+
+    table#stock-info-table {
+        border:none;
+        background-color:#ffffff;
+        margin:0;
+        padding:0px;
+    }
+
+    table#stock-info-table tbody tr th {
+        font-family: lato; font-weight: 400;
+        font-size: 1.4375rem;
+        font-weight: normal;
+        padding: 0px;
+    }
+
+    table#stock-info-table tbody tr td {
+        font-family: lato; font-weight: 400;
+        font-size: 1.4375rem;
+        color: #454952;
+        padding:0px 0px 0px 0px;
+    }
+
+    table#stock-info-table tbody tr td.trade-up {
+        color: #009933;
+    }
+
+    table#stock-info-table tbody tr td.trade-down {
+        color: #ff0000;
+    }
+
+    table#stock-info-table tbody tr td.trade-arrow-up {
+        background-image: url(../../images/green-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 1.014em 1.007em;
+        background-size: 20px 20px;
+        background-position: 14% 49%;
+        padding: 0 10px 0 30px;
+        color: #009933;
+    }
+
+    table#stock-info-table tbody tr td.trade-arrow-down {
+        background-image: url(../../images/red-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 1.014em 1.007em;
+        background-size: 20px 20px;
+        background-position: 14% 49%;
+        padding: 0 10px 0 30px;
+        color: #ff0000;
+    }
+
+    ul#trade-setup-nav-mobile {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    ul#trade-setup-nav-mobile li {
+        display: inline;
+        list-style-type: none;
+    }
+
+    ul#trade-setup-nav-mobile li img {
+        width: 20px;
+        height: 20px;
+        margin: 0 10px 0 10px;
+    }
+
+    ul#trade-setup-nav-mobile li a img {
+        width: 20px;
+        height: 20px;
+        color: #ff0000;
+    }
+
+    #trade-setup-table td {
+        text-overflow: ellipsis;
+    }
+
+    #market-action-section {
+        display: none;
+    }
+
+    aside#market-action-section-mobile-off-canvas.right-off-canvas-menu {
+        background-color: #eeeeee;
+    }
+
+    aside#market-action-section-mobile-off-canvas.right-off-canvas-menu div#market-action-section-mobile {
+        padding: 10px;
+    }
+
+    aside#market-action-section-mobile-off-canvas.right-off-canvas-menu div#market-action-section-mobile h3 {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    aside#market-action-section-mobile-off-canvas.right-off-canvas-menu div#market-action-section-mobile h4 {
+        color:#000;
+        font-size:1.0625rem;
+        line-height: 1.5;
+        font-family: lato; font-weight: 900;
+        margin: 3px 0 0 0;
+        display: inline;
+    }
+
+    aside#market-action-section-mobile-off-canvas.right-off-canvas-menu div#market-action-section-mobile img {
+        float: left;
+        margin: 0 10px 0 0px;
+        width: 50px;
+        height: 50px;
+    }
+
+    #trade-setup-chart-section {
+        display: none;
+    }
+
+    table#current-trades-mobile.full-width {
+        background-color: #ffffff;
+        border: none;
+        border-collapse: collapse;
+    }
+
+    table#current-trades-mobile.full-width thead tr {
+        background-color: #ffffff;
+        border-bottom: solid #c6c6c6 1px;
+    }
+
+    table#current-trades-mobile.full-width thead tr th {
+        font-family: lato; 
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: #454952;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    table#current-trades-mobile.full-width thead tr th.price {
+        padding-left: 10px;
+    }
+
+    table#current-trades-mobile.full-width tbody tr {
+        background-color: #ffffff;
+    }
+
+    table#current-trades-mobile.full-width tbody tr:hover {
+        background-color: #e3e1e7;
+    }
+
+    table#current-trades-mobile.full-width tbody tr.preview {
+        background-color: #ffdf00;
+    }
+
+    table#current-trades-mobile.full-width tbody tr th {
+        font-family: lato; 
+        font-weight: 700;
+        font-size: 0.875rem;
+        color: #333399;
+        padding: 0;
+    }
+
+    table#current-trades-mobile.full-width tbody tr th a {
+        color: #333399;
+    }
+
+    table#current-trades-mobile.full-width tbody tr th span.new-trade-label {
+        background-color: #0099cc;
+        border-radius: 15px;
+        color: #ffffff;
+        padding: 1px 4px 1px 4px;
+        margin: 0 0px 0 0px;
+        font-size: 0.675rem;
+    }
+
+    table#current-trades-mobile.full-width tbody tr th span.short-trade-label {
+        background-color: #ff0000;
+        border-radius: 15px;
+        color: #ffffff;
+        padding: 1px 4px 1px 4px;
+        margin: 0 0 0 0px;
+        font-size: 0.675rem;
+    }
+
+    table#current-trades-mobile.full-width tbody tr td span.new-trade-label {
+        background-color: #0099cc;
+        border-radius: 15px;
+        color: #ffffff;
+        padding: 1px 4px 1px 4px;
+        margin: 0 0px 0 0px;
+        font-size: 0.675rem;
+    }
+
+    table#current-trades-mobile.full-width tbody tr td span.short-trade-label {
+        background-color: #ff0000;
+        border-radius: 15px;
+        color: #ffffff;
+        padding: 1px 4px 1px 4px;
+        margin: 0 0 0 0px;
+        font-size: 0.675rem;
+    }
+
+    table#current-trades-mobile tbody tr td.trade-red-arrow {
+        color: #ff0000;
+        background-image: url(../../images/red-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 1.014em 1.007em;
+        background-size: 12px 12px;
+        /* background-position: 39% 49%; This used to be 11% by 49%. */
+        /* padding: 0 10px 0 30px; */
+        text-align: center; /* The text used to be aligned left */
+        background-origin: padding-box;
+        background-position: left center;
+        width: 100px;
+    }
+
+    table#current-trades-mobile tbody tr td.trade-red {
+        color: #ff0000;
+        display: block;
+        padding-left: 30px;
+        padding-right: 0px;
+        width: 100px;
+    }
+
+    table#current-trades-mobile tbody tr td.trade-green-arrow {
+        color: #009900;
+        background-image: url(../../images/green-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 1.014em 1.007em;
+        background-size: 12px 12px;
+        /*background-position: 39% 49%;
+        padding: 0 10px 0 30px;*/
+        text-align: center;
+        background-origin: padding-box;
+        background-position: left center;
+        width: 100px;
+    }
+
+    table#current-trades-mobile tbody tr td.trade-green {
+        color: #009900;
+        display: block;
+        padding-left: 30px;
+        padding-right: 0px;
+        width: 100px;
+    }
+
+    /*****************Past Trades Media Query CSS Starts Here*******************/
+
+    .past-trades-charts-mobile {
+        padding: 0 0 0 0;
+    }
+
+    .doughnut-chart-mobile {
+        padding: 0 0 0 0;
+    }
+
+    .doughnut-chart-mobile .doughnut-section-mobile {
+        width: 100%;
+        margin: 0;
+    }
+
+    .doughnut-chart-mobile h3 {
+        text-align: center;
+        font-size: 1.075rem;
+    } 
+
+    .past-trades-charts-mobile .panel {
+        border: none;
+        border-radius: 0;
+    }
+
+    div#doughnutChart.chart {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        width: 100%;
+        height: 10em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    table#past-trades-doughnut-chart-table {
+        padding: 0 0 0 0;
+        margin: 25px 0 0% 10px;
+    }
+
+    table#past-trades-doughnut-chart-table th.past-trades-doughnut-chart-win {
+        padding: 15px 10px 15px 10px;
+    }
+
+    table#past-trades-doughnut-chart-table th.past-trades-doughnut-chart-loss {
+        padding: 15px 10px 15px 10px;
+    }
+
+    table#past-trades-doughnut-chart-table td {
+        padding: 0 0 0 0;
+    }
+
+    .horz-bars {
+        margin: 6px 0 0 4em;
+    }
+
+    .horz-bars ul.data {
+        margin: 0 0 0 0; /***/
+        width: 100px;
+        height: 64px;
+    }
+
+    .horz-bars ul.data li .bar-loser {
+        margin-right: 100px;
+    }
+
+    .no-padding {
+        padding: 0;
+    }
+
+    table#past-trades-bar-chart-table-mobile {
+        border: none;
+        background: #ffffff;
+        float: left;
+        margin: 0 0 0 0;
+        padding: 5px 0 0 1em;
+    }
+
+    table#past-trades-bar-chart-table-mobile tbody tr {
+        background: none;
+    }
+
+    table#past-trades-bar-chart-table-mobile tbody tr th.past-trades-bar-chart-mobile-win {
+        color: #009900;
+        font-size: 1rem;
+        font-family: lato; font-weight: 300;
+        padding: 10px 0 0 0;
+    }
+
+    table#past-trades-bar-chart-table-mobile tbody tr th.past-trades-bar-chart-mobile-loss {
+        color: #ff0000;
+        font-size: 1rem;
+        font-family: lato; font-weight: 300;
+        padding: 10px 0 0 0;
+    }
+
+    table#past-trades-bar-chart-table-mobile tbody tr td {
+        color: #454952;
+        font-size: 1rem;
+        font-family: lato; font-weight: 700;
+        padding: 10px 0 0 10px;
+    }
+
+    form#past-trades-search-fields {
+        float: left;
+        width: 100%
+    }
+
+    form#past-trades-search-fields input {
+        float: right;
+        width: 100px;
+        height: 30px;
+        padding: 0 20px 0 12px;
+        margin: 0 0 0 0;
+        border-radius: 15px;
+        background-image: url(images/search-icon.png);
+        background-repeat: no-repeat;
+        background-size: 9px 9px;
+        background-position: 70px 10px;
+        background-color: #f0f0f0;
+    }
+
+    form#past-trades-search-fields select {
+        width: 100px;
+        height: 30px;
+        float: left;
+        margin: 0 20px 0 12px;
+        padding: 0 0 0 30px;
+        border-radius: 15px;
+        background-color: #f0f0f0;
+    }
+
+    div#past-trades-chart-header.row span.past-trades-heading {
+        font-size: 1.075rem;
+    }
+
+    table#past-trades-mobile.full-width {
+        background-color: #ffffff;
+        border: none;
+        border-collapse: collapse;
+        margin: 10px 0 0 0;
+    }
+
+    table#past-trades-mobile.full-width thead tr {
+        background-color: #ffffff;
+        border-bottom: solid #c6c6c6 1px;
+    }
+
+    table#past-trades-mobile.full-width thead tr th {
+        font-family: lato; font-weight: 700;
+        font-size: 0.9125rem;
+        color: #454952;
+        padding: 0 0 10px 5px;
+    }
+
+    table#past-trades-mobile.full-width tbody tr {
+        background-color: #ffffff;
+    }
+
+    /*table#past-trades.full-width tbody tr:hover {
+        background-color: #e3e1e7;
+    }*/
+
+    table#past-trades-mobile.full-width tbody tr th {
+        font-family: lato; font-weight: 900;
+        font-size: 0.875rem;
+        color: #454952;
+        padding: 5px;
+    }
+
+    table#past-trades-mobile.full-width tbody tr td {
+        font-family: lato; font-weight: 400;
+        font-size: 0.9125rem;
+        color: #444444;
+        padding: 5px;
+    }
+
+    table#past-trades-mobile.full-width tbody tr th a {
+        color: #454952;
+    }
+
+    table#past-trades-mobile.full-width tbody tr td span.new-trade-label {
+        background-color: #0099cc;
+        border-radius: 20px;
+        color: #ffffff;
+        padding: 1px 7px 1px 7px;
+        position: relative;
+        right: 175px;
+        font-size: 0.675rem;
+    }
+
+    table#past-trades-mobile.full-width tbody tr td span.short-trade-label {
+        background-color: #ff0000;
+        border-radius: 20px;
+        color: #ffffff;
+        padding: 1px 7px 1px 7px;
+        position: relative;
+        left: 5px;
+        font-size: 0.675rem;
+    }
+
+    table#past-trades-mobile tbody tr td.trade-red-arrow {
+        color: #ff0000;
+        /*background-image: url(../../images/red-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 1.014em 1.007em;
+        background-size: 12px 12px;*/
+        /* background-position: 39% 49%;  This used to be 11% by 49%. */
+        /* padding: 0 10px 0 30px; */
+        /*text-align: center;*/ /* The text used to be aligned left */
+        background-origin: padding-box;
+        background-position: 15% 50%;
+        width: 100px;
+        display: inline-table;
+    }
+
+    table#past-trades-mobile tbody tr td.trade-red-arrow img {
+        margin: 0 4px 3px 0;
+        width: 12px;
+        height: 12px;
+        padding: 0;
+    }
+
+    table#past-trades-mobile tbody tr td.trade-red {
+        color: #ff0000;
+    }
+
+    table#past-trades-mobile tbody tr td.trade-green-arrow {
+        color: #009900;
+        /*background-image: url(../../images/green-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 1.014em 1.007em;
+        background-size: 12px 12px;*/
+        /*padding: 0 10px 0 30px;*/
+        /*text-align: center;*/
+        background-origin: padding-box;
+        background-position: 15% 50%;
+        width: 100%;
+        display: inline-table;
+    }
+
+    table#past-trades-mobile tbody tr td.trade-green-arrow img {
+        margin: 0 4px 4px 0;
+        width: 12px;
+        height: 12px;
+        padding: 0;
+    }
+
+    table#past-trades-mobile tbody tr td.trade-green {
+        color: #009900;
+    }
+
+    span.short-trade-label-mobile {
+        background-color: #ff0000;
+        border-radius: 20px;
+        color: #ffffff;
+        padding: 1px 7px 1px 7px;
+        /* position: relative; */
+        /* left: 5px; */
+        font-size: 0.675rem;
+    }
+
+    ul.pagination {
+        margin: 5px 0 0 0;
+    }
+
+    /*****************Trade Details Media Query CSS Starts Here*******************/
+    div.row.trade-details-header-section {
+        /*overflow: auto;*/
+    }
+
+    h3#trade-details-trade-name-mobile {
+        font-size: 1.2rem;
+        float: none;
+        text-align: center;
+        font-family: lato;
+        font-weight: 400;
+        color: #454952;
+        padding: 0 0 0 0;
+    }
+
+    h3#trade-details-trade-name-mobile span.short-trade-label {
+        background-color: #ff0000;
+        border-radius: 15px;
+        color: #ffffff;
+        padding: 1px 4px 1px 4px;
+        margin: 0 0 0 0px;
+        font-size: 0.675rem;
+        position: relative;
+        top: -3px;
+    }
+
+    h3#trade-details-trade-name-mobile span.stock-symbol {
+        font-size: 1.2rem;
+        color: #000;
+        padding: 0 0 0 5px;
+        font-family: lato;
+        font-weight: 900;
+    }
+
+    ul#trade-details-nav-mobile-previous li img {
+        width: 20px;
+        height: 20px;
+    }
+
+    ul#trade-details-nav-mobile-next li img {
+        width: 20px;
+        height: 20px;
+    }
+
+    table#trade-details-stock-info-mobile {
+        float: none;
+        border: none;
+        margin: -6px 0 0 0;
+        padding: 0 0 0 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    table#trade-details-stock-info-mobile tbody tr th {
+        display: inline;
+        float: left;
+        font-size: 1.1rem;
+        font-family: lato; font-weight: 400;
+        color: #000;
+        padding: 10px 0 0 0;
+    }
+
+    table#trade-details-stock-info-mobile tbody tr th.volume {
+        display: inline;
+        float: left;
+        padding: 10px 0 0 10px;
+        font-size: 1.1rem;
+    }
+
+    table#trade-details-stock-info-mobile tr td {
+        display: inline;
+        float: left;
+        font-size: 1.1rem;
+        padding: 10px 0 0 0;
+        margin: 0;
+        font-family: lato; font-weight: 400;
+    }
+
+    table#trade-details-stock-info-mobile tbody tr td.stock-up-arrow {
+        font-size: 1.1rem;
+        padding: 10px 0 0 10px;
+        /*background-size: 15px 20px;
+        background-position: 20% 100%;*/
+        color: #006600;
+        /*background-image: url(../../images/green-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 15px 20px;*/
+    }
+
+    table#trade-details-stock-info-mobile tbody tr td.stock-up-arrow img {
+        width: 15px;
+        height: 20px;
+        position: relative;
+        top: -3px;
+        left: 0;
+    }
+
+    table#trade-details-stock-info-mobile tbody tr td.stock-down-arrow {
+        font-size: 1.1rem;
+        padding: 10px 0 0 10px;
+        /*background-size: 15px 20px;
+        background-position: 5% 100%;*/
+        color: #990000;
+        /*background-image: url(../../images/red-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 1.014em 1.007em;*/
+    }
+
+    table#trade-details-stock-info-mobile tr td.stock-up {
+        display: inline;
+        float: left;
+        font-size: 1.1rem;
+        color: #006600;
+        padding: 10px 0 0 5px;
+    }
+
+    table#trade-details-stock-info-mobile tr td.stock-down {
+        display: inline;
+        float: left;
+        font-size: 1.1rem;
+        color: #990000;
+        padding: 10px 0 0 5px;
+    }
+
+    table#trade-details-stock-info-mobile tbody tr td.volume-up-arrow {
+        color: #006600;
+    }
+
+    table#trade-details-stock-info-mobile tbody tr td.volume-down-arrow {
+        color: #990000;
+    }
+
+    table#trade-details-stock-info-mobile tbody tr td.volume-up-arrow img {
+        width: 15px;
+        height: 20px;
+        position: relative;
+        top: -3px;
+        left: 0;
+    }
+
+    table#trade-details-stock-info-mobile tbody tr td.volume-down-arrow img {
+        width: 15px;
+        height: 20px;
+        position: relative;
+        top: -2px;
+        left: 0;
+    }
+
+    /*table#trade-details-stock-info-mobile tbody tr td.volume-up-arrow {
+        color: #006600;
+        background-image: url(../../images/green-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 15px 20px;
+        background-size: 15px 20px;
+        background-position: 5% 100%;
+        padding: 10px 0px 0px 20px;
+    }
+    
+    table#trade-details-stock-info-mobile tbody tr td.volume-down-arrow {
+        color: #990000;
+        background-image: url(../../images/red-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 15px 20px;
+        background-size: 15px 20px;
+        background-position: 5% 100%;
+        padding: 10px 0px 0 20px;
+    }*/
+
+    div.trade-details-mobile-nav-section{
+        padding: 10px 15px 0 15px;
+    }
+
+    ul#trade-details-nav-mobile-previous {
+        float: left;
+        margin: 0;
+    }
+
+    ul#trade-details-nav-mobile-previous li {
+        display: inline;
+        list-style-type: none;
+    }
+
+    ul#trade-details-nav-mobile-next {
+        float: right;
+        margin: 0;
+    }
+
+    ul#trade-details-nav-mobile-next li {
+        display: inline;
+        list-style-type: none;
+    }
+
+    div#trade-details-nav-mobile {
+        float: right;
+    }
+
+    div#trade-details-nav-mobile ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    div#trade-details-nav-mobile ul li {
+        display: inline;
+        color: #808080;
+        font-size: 0.875rem;
+    }
+
+    div#trade-details-nav-mobile ul li a {
+        color: #666666;
+        font-size: 0.875rem;
+    }
+
+    /* This adds a border around the chart section of the trade details page on mobile */
+
+    .trade-details-chart-section-mobile {
+        border: solid 1px #c6c6c6;
+    }
+
+    /* End border CSS */
+
+    div#trade-details-chart-nav-mobile {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        text-align: center;
+    }
+
+    div#trade-details-chart-nav-mobile ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    div#trade-details-chart-nav-mobile ul li {
+        display: inline-block;
+        width: 30px;
+        margin: 0;
+        padding: 0px;
+        text-align: center;
+    }
+
+    div#trade-details-chart-nav-mobile ul li.no-border {
+        border: none;
+    }
+
+    div#trade-details-chart-nav-mobile ul li a {
+        color: #454952;
+        font-family: lato; font-weight: 400;
+        font-size: 1rem;
+        margin: -2px;
+        padding: 3px 10px 3px 10px;
+        border: solid 1px #777777;
+        border-top: 0px;
+        border-bottom: 0px;
+        border-left: 0px;
+    }
+
+    div#trade-details-chart-nav-mobile ul li a.no-border {
+        border: none;
+    }
+
+    div#trade-details-chart-nav-mobile a.chart-mobile-daily {
+        width: 25px;
+        height: 25px;
+        background-image: url(../../images/chart-buttons-mobile-daily.png);
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin: 0 5px 0 0;
+    }
+
+    div#trade-details-chart-nav-mobile a.chart-mobile-daily-active {
+        width: 25px;
+        height: 25px;
+        background-image: url(../../images/chart-buttons-mobile-daily-active.png);
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin: 0 5px 0 0;
+    }
+
+    div#trade-details-chart-nav-mobile a.chart-mobile-weekly {
+        width: 25px;
+        height: 25px;
+        background-image: url(../../images/chart-buttons-mobile-weekly.png);
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin: 0 0 0 0;
+    }
+
+    div#trade-details-chart-nav-mobile a.chart-mobile-weekly-active {
+        width: 25px;
+        height: 25px;
+        background-image: url(../../images/chart-buttons-mobile-weekly-active.png);
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin: 0 0 0 0;
+    }
+
+    div#trade-details-chart-nav-mobile a.chart-mobile-intraday {
+        width: 25px;
+        height: 25px;
+        background-image: url(../../images/chart-buttons-mobile-intraday.png);
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin: 0 0 0 5px;
+    }
+
+    div#trade-details-chart-nav-mobile a.chart-mobile-intraday-active {
+        width: 25px;
+        height: 25px;
+        background-image: url(../../images/chart-buttons-mobile-intraday-active.png);
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin: 0 0 0 5px;
+    }
+
+    table#trade-details-table-info tbody tr th {
+        float: none;
+        clear: none;
+        vertical-align: top;
+        line-height: 1.25;
+        width: 106px;
+    }
+
+    table#trade-details-table-info tbody tr th span.short-trade-label {
+        margin: 0 0 0 0;
+        display: none;
+    }
+
+    table#trade-details-table-info tbody tr td {
+        /*height: 100%;*/
+        padding: 0 0 10px 5px;
+        /*margin: 0 0 10px 0;
+        float: none;
+        clear: none;
+        display: inline-block;*/
+        font-size: 1.025rem;
+    }
+
+    .trade-details-mobile {
+        padding: 0 0 0 0;
+    }
+
+    .trade-details-mobile .panel {
+        border: none;
+        border-radius: 0;
+        padding-top: 10px;
+    }
+
+    p.time-stamp {
+        margin: 0 0 0 0;
+        font-size: 0.6875rem;
+        border: solid 1px #c6c6c6;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+    }
+
+    /* Off Canvas-Calculator Experiment CSS Starts Here! */
+
+    nav.tab-bar section.right-small {
+        border: none;
+    }
+
+    nav.tab-bar section.right-small a.right-off-canvas-toggle img {
+        width: 30px;
+        height: 30px;
+    }
+
+    div.trade-details-calculator-section-mobile {
+        width: 100%;
+    }
+
+    table#trade-details-table-calculator-mobile {
+        padding: 10px 0 0 0;
+        margin: 0 0 0 0;
+        background-color: #ffffff;
+        border: none;
+    }
+
+    aside#position-size-calculator-offcanvas.right-off-canvas-menu span.short-trade-label {
+        margin: 0 0 -2px 0px;
+        display: inline-block;
+        width: 50px;
+        height: 15px;
+        background-image: url(images/short-label.png);
+        background-size: 50px 15px;
+    }
+
+    table#trade-details-table-calculator-mobile tbody tr {
+        background-color: #ffffff;
+    }
+
+    table#trade-details-table-calculator-mobile tbody tr th {
+        text-align: left;
+        float: left;
+        clear: both;
+        padding: 0 0 5px 0;
+        font-family: lato; font-weight: 900;
+        font-size: 1rem;
+        color: #000;
+    }
+
+    table#trade-details-table-calculator-mobile tr td {
+        float: left;
+        clear: both;
+        padding: 0 0 10px 0;
+        font-family: lato; font-weight: 400;
+        font-size: 0.9375rem;
+        color: #454952;
+        line-height: 1.25;
+    }
+
+    table#trade-details-table-calculator-mobile tr td img {
+        width: 60px;
+        height: 60px;
+        float: left;
+    }
+
+    table#trade-details-table-calculator-mobile tr td span.position-size-calculator {
+        float: left;
+        padding: 10px 0 0 10px;
+        font-family: lato; font-weight: 900;
+        font-size: 1rem;
+        color: #454952;
+    }
+
+    /* Position Size Calculator Right Offcanvas CSS starts here! */
+
+    aside#position-size-calculator-offcanvas.right-off-canvas-menu {
+        background: #eeeeee;
+    }
+
+    .position-size-calculator-mobile-container {
+        padding: 10px;
+    }
+
+    aside#position-size-calculator-offcanvas.right-off-canvas-menu img {
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin: 0 10px 0 10px;
+    }
+
+    aside#position-size-calculator-offcanvas.right-off-canvas-menu div.position-size-calculator-mobile-container span.position-size-calculator-heading {
+        font-family: lato; font-weight: 900;
+        font-size: 0.8rem;
+        color: #454952;
+    }
+
+    aside#position-size-calculator-off-canvas.right-off-canvas-menu hr {
+        margin: 10px 0 0 0;
+        border: solid #959394 1px;
+    }
+
+    table#position-size-calculator-mobile {
+        width:100%;
+        background: none;
+        border: none;
+        margin: 0 0 10px 0;
+    }
+
+    table#position-size-calculator-mobile tbody tr {
+        background: none;
+    }
+
+    table#position-size-calculator-mobile tbody tr th {
+        font-family: lato; font-weight: 400;
+        font-size: 0.9375rem;
+        color: #000;
+        width: 125px;
+    }
+
+    table#position-size-calculator-mobile tbody tr td {
+        padding: 0;
+        margin: 0;
+    }
+
+    table#position-size-calculator-mobile tbody tr td input {
+        padding: 0 10px 0 20px;
+        margin: 0 0 0 0;
+        height: 30px;
+        width: 95px;
+    }
+
+    table#position-size-calculator-mobile tbody tr td input:focus {
+        border-color: #333399;
+    }
+
+    table#position-size-calculator-mobile tbody tr td input.dollar-sign:focus {
+        background-image: url(images/dollar-icon.png);
+        background-repeat: no-repeat;
+        background-size: 12px 12px;
+        background-position: 10px 10px;
+        transition: border-color 0.15s linear;
+    }
+
+    table#position-size-calculator-results-mobile {
+        width:100%;
+        background: none;
+        border: none;
+    }
+
+    table#position-size-calculator-results-mobile tbody tr {
+        background: none;
+    }
+
+    table#position-size-calculator-results-mobile tbody tr td {
+        text-align: right;
+    }
+
+    footer p {
+        margin: 0px 0 10px 0;
+    }
+
+    ul#trade-details-chart-legend {
+        padding: 0 0 0 0;
+        margin: -5px 0 0 0;
+    }
+
+    ul#trade-details-chart-legend li {
+        display: inline;
+        font-size: 0.6875rem;
+        padding: 0 10px 0 0px;
+        font-family: lato; font-weight: 400;
+        float: left;
+    }
+
+    ul#trade-details-chart-legend li.fifty-day {
+        color: #990000;
+        padding-right: 3px;
+    }
+
+    /* Delete the following after the demo on February 23, 2016 */
+
+    /*.past-trades {
+        margin-top: 0;
+    }
+    
+    .past-trades-header-mobile {
+        position: static
+    }
+    
+    ul.off-canvas-list li.off-canvas-logo-section {
+        background-color: #eeeeee;
+    }*/
+
+    /* About Page Media Query CSS Styling Starts Here! */
+
+    .about-page-wrapper {
+        padding: 0;
+    }
+
+    .about-heading {
+        padding: 0 20px 0 20px;
+    }
+
+    .about-quote {
+        margin: 0 0 40px 0;
+    }
+
+    .about-investing-section {
+        margin: 0;
+        padding: 0 20px 0 20px;
+    }
+
+    .about-team-section {
+        margin: 0;
+        padding: 0 20px 0 20px;
+    }
+
+    .about-concierge-section {
+        margin: 0;
+        padding: 0 20px 20px 20px;
+    }
+
+    .about-concierge-heading {
+        margin: 10px 0 30px 0;
+    }
+
+    .about-concierge-section-left {
+        width: 100%;
+        float: none;
+        margin: 0 0 0 0;
+    }
+
+    .about-concierge-section-left p {
+        margin: 0 0 0 0;
+    }
+
+    .about-concierge-section-right p {
+        margin: 0 0 0 0;
+    }
+
+    .about-concierge-section-right {
+        width: 100%;
+        float: none;
+        margin: 20px 0 0 0;
+    }
+
+    .footerContainer {
+        margin: 1rem;
+        font-size: 11px;
+    }
+
+    .footerContainer a {
+        color: #039   
+    }
+
+    /*****************Recent Alerts Media Query CSS Starts Here*******************/
+
+    .recent-alerts-mobile {
+        padding: 0 0 0 0;
+    }
+
+    .recent-alerts-mobile .panel {
+        border: none;
+        border-radius: 0;
+    }
+
+    form#recent-alerts-search-fields {
+        float: right;
+    }
+
+    form#recent-alerts-search-fields input {
+        float: right;
+        width: 100px;
+        height: 30px;
+        padding: 0 20px 0 12px;
+        margin: 0 0 0 0;
+        border-radius: 15px;
+        background-image: url(images/search-icon.png);
+        background-repeat: no-repeat;
+        background-size: 9px 9px;
+        background-position: 70px 10px;
+        background-color: #f0f0f0;
+    }
+
+    form#recent-alerts-search-fields select {
+        width: 100px;
+        height: 30px;
+        float: left;
+        margin: 0 20px 0 12px;
+        padding: 0 0 0 30px;
+        border-radius: 15px;
+        background-color: #f0f0f0;
+    }
+
+    div#recent-alerts-chart-header.row span.recent-alerts-heading {
+        font-size: 1.075rem;
+    }
+
+    table#recent-alerts-mobile.full-width {
+        background-color: #ffffff;
+        border: none;
+        border-collapse: collapse;
+        margin: 10px 0 0 0;
+    }
+
+    table#recent-alerts-mobile.full-width thead tr {
+        background-color: #ffffff;
+        border-bottom: solid #c6c6c6 1px;
+    }
+
+    table#recent-alerts-mobile.full-width thead tr th {
+        font-family: lato; 
+        font-weight: 700;
+        font-size: 0.9125rem;
+        color: #454952;
+        padding: 0 10px 10px 0px;
+    }
+    
+    table#recent-alerts-mobile.full-width thead tr th.alert-symbol-header {
+        padding: 0 0 10px 10px;
+    }
+
+    table#recent-alerts-mobile.full-width tbody tr {
+        background-color: #ffffff;
+        border: solid #cccccc 1px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    /*table#past-trades.full-width tbody tr:hover {
+        background-color: #e3e1e7;
+    }*/
+
+    table#recent-alerts-mobile.full-width tbody tr th {
+        font-family: lato; 
+        font-weight: 400;
+        font-size: 0.875rem;
+        color: #454952;
+        padding: 0 0 0 0;
+        height: 60px;
+    }
+
+    table#recent-alerts-mobile.full-width tbody tr td {
+        font-family: lato; 
+        font-weight: 400;
+        font-size: 0.9125rem;
+        color: #444444;
+        padding: 0 0 0 10px;
+        height: 60px;
+    }
+    
+    table#recent-alerts-mobile.full-width tbody tr td.alert-symbol-mobile {
+        padding: 0 0 0 5px;
+    }
+
+    table#recent-alerts-mobile.full-width tbody tr th a {
+        color: #454952;
+    }
+
+    table#recent-alerts-mobile.full-width tbody tr td span.new-trade-label {
+        background-color: #0099cc;
+        border-radius: 20px;
+        color: #ffffff;
+        padding: 1px 7px 1px 7px;
+        position: relative;
+        right: 175px;
+        font-size: 0.675rem;
+    }
+
+    table#recent-alerts-mobile.full-width tbody tr td span.short-trade-label {
+        background-color: #ff0000;
+        border-radius: 20px;
+        color: #ffffff;
+        padding: 1px 7px 1px 7px;
+        position: relative;
+        left: 5px;
+        font-size: 0.675rem;
+    }
+
+    table#recent-alerts-mobile tbody tr td.trade-red-arrow {
+        color: #ff0000;
+        /*background-image: url(../../images/red-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 1.014em 1.007em;
+        background-size: 12px 12px;*/
+        /* background-position: 39% 49%;  This used to be 11% by 49%. */
+        /* padding: 0 10px 0 30px; */
+        /*text-align: center;*/ /* The text used to be aligned left */
+        background-origin: padding-box;
+        background-position: 15% 50%;
+        width: 100px;
+        display: inline-table;
+    }
+
+    table#recent-alerts-mobile tbody tr td.trade-red-arrow img {
+        margin: 0 4px 3px 0;
+        width: 12px;
+        height: 12px;
+        padding: 0;
+    }
+
+    table#recent-alerts-mobile tbody tr td.trade-red {
+        color: #ff0000;
+    }
+
+    table#recent-alerts-mobile tbody tr td.trade-green-arrow {
+        color: #009900;
+        /*background-image: url(../../images/green-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 1.014em 1.007em;
+        background-size: 12px 12px;*/
+        /*padding: 0 10px 0 30px;*/
+        /*text-align: center;*/
+        background-origin: padding-box;
+        background-position: 15% 50%;
+        width: 100%;
+        display: inline-table;
+    }
+
+    table#recent-alerts-mobile tbody tr td.trade-green-arrow img {
+        margin: 0 4px 4px 0;
+        width: 12px;
+        height: 12px;
+        padding: 0;
+    }
+
+    table#recent-alerts-mobile tbody tr td.trade-green {
+        color: #009900;
+    }
+
+    span.short-trade-label-mobile {
+        background-color: #ff0000;
+        border-radius: 20px;
+        color: #ffffff;
+        padding: 1px 7px 1px 7px;
+        /* position: relative; */
+        /* left: 5px; */
+        font-size: 0.675rem;
+    }
+
+    ul.pagination {
+        margin: 5px 0 0 0;
+    }
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) /* min-width 641px and max-width 1024px,*/ {
+
+    /* Global CSS Styles for tablets, medium screen devices */
+
+    /* This css code keeps the off-canvas menu sticky so that it does not scroll with main content on the page. */
+    /* Even when I scroll down on the main content of a page, the off-canvas menu will always appear at the top of the menu. */
+    .wrapper,
+    body,
+    html,
+    .off-canvas-wrap, 
+    .off-canvas-wrap .inner-wrap {
+        width: 100%;
+    }
+
+    .wrapper {
+        padding-top: 60px;
+    }
+    /* End sticky off-canvas CSS code. Note: margin-top: 45px; is not originally part of this code. */
+
+    /*This controls the appearance of the banner notifications on tablet devices */
+    .alert-box {
+        z-index: 2;
+        min-height: 45px;
+        position: fixed;
+        width: 100%;
+    }
+    /* End banner notifications on mobile */
+
+    .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        color: #ff0000;
+    }
+
+    .ellipsis.multiline {
+        white-space: normal;
+        color: #0000ff;
+    }
+
+    .trade-data {
+        display: block;
+        height: 51px;
+        padding-bottom: 0;
+    }
+
+    .no-padding {
+        padding: 0;
+    }
+
+    .no-padding-right {
+        padding-right: 0;
+    }
+
+    .swing-trader-mobile-logo {
+        font-family: lato; font-weight: 700;
+        color: #663399;
+    }
+
+    header {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        /*border: solid blue;*/
+        background-color: #808080;
+        width: 100%;
+        height: 45px;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+
+    header h1.logo {
+        margin: 10px 0 0 0;
+        padding: 0 0 0 0;
+        text-align: center;
+        height: 25px;
+    }
+
+    header h1.logo a img {
+        width: 200px;
+        height: auto;
+    }
+
+    header h1.logo span.logo-tagline {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        display: none;
+    }
+
+    header h1.logo span.logo-tagline a img {
+        margin: 0 0 0 0;
+        height: 10px;
+        width: auto;
+    }
+
+    h1.header-mobile {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        text-align: center;
+        display: inline;
+    }
+
+    h1.header-mobile a {
+        text-align: center;
+        font-family: lato; 
+        font-weight: 100;
+        color: #ffffff;
+        font-size: 1.2875rem;
+    }
+
+    nav#main-nav {
+        /*border: solid blue;*/
+        width: 100%;
+        margin: 10px 0 0 0;
+
+    }
+
+    nav#main-nav ul {
+        margin:0;
+        padding:0px;
+        height: auto;
+        list-style-type: none;
+        text-align: center;
+    }
+
+    nav#main-nav li {
+        display: inline;
+        padding: 0 5px 0 0;
+        width:100%;
+    }
+
+    nav#main-nav ul li a {
+        font-family: lato; font-weight: 300;
+        font-size: 0.875rem;
+        color: #777;
+    }
+
+    nav#main-nav ul li a:hover {
+        color: #333399;
+    }
+
+    /* Start Off-Canvas CSS */
+
+    nav.tab-bar {
+        background-color: #563d93;
+    }
+
+    nav.tab-bar section.left-small {
+        border: none;
+    }
+
+    /* This controls the color of the hamburger menu icon on Foundation Offcanvas */
+
+    .tab-bar .menu-icon span::after {
+        box-shadow: 0 0 0 1px #ffffff, 0 7px 0 1px #ffffff, 0 14px 0 1px #ffffff;
+    }
+
+    aside.left-off-canvas-menu {
+        background-color: #eeeeee;
+    }
+
+    ul.off-canvas-list li {
+        background-color: #ffffff;
+    }
+
+    ul.off-canvas-list li a {
+        color: #454952;
+    }
+
+    ul.off-canvas-list li a:hover {
+        background-color: #777777;
+        color: #ffffff;
+    }
+
+    /* End Off-Canvas CSS */
+
+    body {
+        padding: 0;
+    }
+
+    /*h1.logo a img {
+        width: 300px;
+    }
+
+    header h1.logo span.logo-tagline a img {
+        width: 175px;
+    }
+
+    nav#main-nav {
+        margin-top: 0;
+    }
+
+    nav#main-nav ul {
+        text-align: left;
+    }
+
+    nav#main-nav li {
+        padding: 0 30px 0 0;
+    }*/
+
+    .footerContainer {
+        margin: 1rem;
+        font-size: 11px;
+    }
+
+    .footerContainer a {
+        color: #039   
+    }
+
+    /* CSS styles for current trades on tablet devices starts here*/
+
+    div#myModal.reveal-modal.open {
+        left:0px;
+        width: auto;
+        top:initial;
+    }
+
+    table#market-action-table-tablet {
+        border: none;
+        background-color:#ffffff;
+        width: 100%;
+        margin:0;
+        padding:17px 0px 17px 0px;
+    }
+
+    table#market-action-table-tablet tbody {
+
+    }
+
+    table#market-action-table-tablet tbody tr {
+        border: none;
+        background-color:#ffffff;
+    }
+
+    table#market-action-table-tablet tbody tr th {
+        padding:0px;
+        margin:0px;
+        font-weight:normal;
+    }
+
+    table#market-action-table-tablet tbody tr td {
+        font-size:0.875rem;
+        line-height: 1.7;
+        padding:0px;
+        padding-left: 0px;
+        margin:0;
+        text-align: right;
+    }
+
+    div#market-action-section-tablet.panel table#market-action-table-tablet tbody tr td.market-red-arrow {
+        color: #ff0000;
+        background-image: url(../../images/red-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 1.014em 1.007em;
+        background-size: 12px 12px;
+        background-position: 15px 49%;
+        padding: 0 10px 0 30px;
+        text-align: left;
+    }
+
+    div#market-action-section-tablet.panel table#market-action-table-tablet tbody tr td.market-red {
+        color: #ff0000;
+        text-align: left;
+    }
+
+    div#market-action-section-tablet.panel table#market-action-table-tablet tbody tr td.market-green {
+        color: #009900;
+        text-align: left;
+    }
+
+    div#market-action-section-tablet.panel table#market-action-table-tablet tbody tr td.market-green-arrow {
+        color: #009900;
+        background-image: url(../../images/green-arrow.svg);
+        background-repeat: no-repeat;
+        -webkit-background-size: 1.014em 1.007em;
+        background-size: 12px 12px;
+        background-position: 15px 49%;
+        padding: 0 10px 0 30px;
+        text-align: left;
+    }
+
+    div#market-action-section-tablet.panel table#market-action-table-tablet tbody tr td img {
+        float: left;
+        margin: 6px 0 0 15px;
+    }
+
+    /* CSS styles for trade details on tablet devices starts here */
+
+    div.trade-details-calculator-section {
+        position: static;
+    }
+
+    h3#trade-details-trade-name {
+        margin-bottom: 5px;
+    }
+
+    table#trade-details-stock-info.show-for-medium-up tbody tr th {
+        padding: 10px 0 0 0;
+    }
+
+    table#trade-details-stock-info tbody tr th.volume {
+        padding: 10px 0 0 15px;
+    }
+
+    div#trade-details-chart-nav {
+        float: left;
+        clear: left;
+        margin: 10px 30px 0 0;
+        padding: 0 0 0 0;
+    }
+
+    div#trade-details-nav {
+        margin: 10px 0 0 0;
+    }
+
+    ul#trade-details-chart-legend {
+        padding: 0 0 0 0;
+        margin: -5px 0 10px 0;
+    }
+
+    nav.tab-bar section.right-small {
+        border: none;
+    }
+
+    nav.tab-bar section.right-small a.right-off-canvas-toggle img {
+        width: 30px;
+        height: 30px;
+    }
+
+    div.trade-details-calculator-section-mobile {
+        border: solid 1px #c6c6c6;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        width: 100%;
+    }
+
+    table#trade-details-table-calculator-mobile {
+        padding: 10px 0 0 0;
+        margin: 0 0 0 0;
+        background-color: #ffffff;
+        border: none;
+    }
+
+    aside#position-size-calculator-offcanvas.right-off-canvas-menu span.short-trade-label {
+        margin: 0 0 -2px 0;
+        display: inline-block;
+        width: 50px;
+        height: 15px;
+        background-image: url(images/short-label.png);
+        background-size: 50px 15px;
+    }
+
+    table#trade-details-table-calculator-mobile tbody tr {
+        background-color: #ffffff;
+    }
+
+    table#trade-details-table-calculator-mobile tbody tr th {
+        text-align: left;
+        float: left;
+        clear: both;
+        padding: 0 0 5px 0;
+        font-family: lato; font-weight: 900;
+        font-size: 1rem;
+        color: #000;
+    }
+
+    table#trade-details-table-calculator-mobile tr td {
+        float: left;
+        clear: both;
+        padding: 0 0 10px 0;
+        font-family: lato; font-weight: 400;
+        font-size: 0.9375rem;
+        color: #454952;
+        line-height: 1.25;
+    }
+
+    table#trade-details-table-calculator-mobile tr td img {
+        width: 60px;
+        height: 60px;
+        float: left;
+    }
+
+    table#trade-details-table-calculator-mobile tr td span.position-size-calculator {
+        float: left;
+        padding: 10px 0 0 10px;
+        font-family: lato; font-weight: 900;
+        font-size: 1rem;
+        color: #454952;
+    }
+
+    /* Position Size Calculator Right Offcanvas CSS starts here! */
+
+    aside#position-size-calculator-offcanvas.right-off-canvas-menu {
+        background: #eeeeee;
+    }
+
+    .position-size-calculator-mobile-container {
+        padding: 10px;
+    }
+
+    aside#position-size-calculator-offcanvas.right-off-canvas-menu img {
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin: 0 10px 0 10px;
+    }
+
+    aside#position-size-calculator-offcanvas.right-off-canvas-menu div.position-size-calculator-mobile-container span.position-size-calculator-heading {
+        font-family: lato; font-weight: 900;
+        font-size: 0.8rem;
+        color: #454952;
+    }
+
+    aside#position-size-calculator-off-canvas.right-off-canvas-menu hr {
+        margin: 10px 0 0 0;
+        border: solid #959394 1px;
+    }
+
+    table#position-size-calculator-mobile {
+        width:100%;
+        background: none;
+        border: none;
+        margin: 0 0 10px 0;
+    }
+
+    table#position-size-calculator-mobile tbody tr {
+        background: none;
+    }
+
+    table#position-size-calculator-mobile tbody tr th {
+        font-family: lato; font-weight: 400;
+        font-size: 0.9375rem;
+        color: #000;
+        width: 125px;
+    }
+
+    table#position-size-calculator-mobile tbody tr td {
+        padding: 0;
+        margin: 0;
+    }
+
+    table#position-size-calculator-mobile tbody tr td input {
+        padding: 0 10px 0 20px;
+        margin: 0 0 0 0;
+        height: 30px;
+        width: 95px;
+    }
+
+    table#position-size-calculator-mobile tbody tr td input:focus {
+        border-color: #333399;
+    }
+
+    table#position-size-calculator-mobile tbody tr td input.dollar-sign:focus {
+        background-image: url(images/dollar-icon.png);
+        background-repeat: no-repeat;
+        background-size: 12px 12px;
+        background-position: 10px 10px;
+        transition: border-color 0.15s linear;
+    }
+
+    table#position-size-calculator-results-mobile {
+        width:100%;
+        background: none;
+        border: none;
+    }
+
+    table#position-size-calculator-results-mobile tbody tr {
+        background: none;
+    }
+
+    table#position-size-calculator-results-mobile tbody tr td {
+        text-align: right;
+    }
+
+    /* CSS styles for past trades on tablet devices starts here */
+
+    table#past-trades-doughnut-chart-table {
+        margin: 0 0 0 20px;
+    }
+
+    div.horz-bars.show-for-medium-up {
+        margin: 80px 0 0 4.5em;
+    }
+
+    div.horz-bars.show-for-medium-up ul.data {
+        margin: 0 0 0 0;
+        width: 80px;
+    }
+
+    div.horz-bars.show-for-medium-up ul.data li div.bar.bar-loser {
+        margin-right: 80px;
+    }
+
+    table#past-trades-bar-chart-table {
+        padding: 80px 0 0 0;
+    }
+
+    div#doughnutChart.chart {
+        margin: 0 0 0 0;
+    }
+
+    .chart {
+        width: 170px;
+        height: 190px;
+    }
+
+    .horz-bars {
+        margin: 80px 0 0 6em;
+    }
+
+    table#past-trades-bar-chart-table {
+        padding: 95px 0 0 0;
+        border: none;
+        background: none;
+    }
+
+    table#past-trades-bar-chart-table tbody tr {
+        background: none;
+    }
+
+    table#past-trades-bar-chart-table tbody tr td {
+        font-size: 1.125rem;
+        font-family: lato;
+        font-weight: 700;
+        color: #454952;
+
+    }
+
+    table#past-trades-bar-chart-table tbody tr th.past-trades-bar-chart-win {
+        padding: 2px 0 9px 0;
+        display: table-header-group;
+    }
+
+    table#past-trades-bar-chart-table tbody tr th.past-trades-bar-chart-loss {
+        padding: 5px 0 9px 0;
+        display: table-header-group;
+    }
+
+
+}
+
+/* The following applies styles to tablet devices on landscape orientation only */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) and (orientation: landscape) /* min-width 641px and max-width 1024px,*/ {
+
+    /* Landscape CSS for Tablet Devices on the Past Trades page starts here! */
+
+    /*table#past-trades-bar-chart-table tbody tr th.past-trades-bar-chart-win {
+        width: 171px;
+    }*/
+
+    table#past-trades-bar-chart-table {
+        padding: 100px 0 0 0;
+    }
+
+    .chart {
+        width: 150px;
+    }
+
+    table#past-trades-doughnut-chart-table {
+        margin: 0 0 0 0;
+    }
+
+}
+
+/* This fixes styling issues with the horizontal bar chart legend on iPad landscape view. */
+
+@media only screen and (width: 1024px) and (orientation: landscape) {
+    table#past-trades-bar-chart-table tbody tr th.past-trades-bar-chart-win {
+        height: 54px;
+        padding: 9px 0 9px 0;
+    }
+
+    table#past-trades-bar-chart-table tbody tr td.win {
+        padding-right:0;
+        padding-bottom: 18px;
+        padding-top: 0;
+    }
+
+    table#past-trades-bar-chart-table tbody tr td.loss {
+        padding-right:0;
+        padding-bottom: 18px;
+        padding-top: 5px;
+    }
+
+    /* This increases the size and adjusts the position of the horizontal bar chart on landspace view on iPad and tablet devices. */
+
+    div.horz-bars.show-for-medium-up {
+        margin: 80px 0 0 6.5em;
+    }
+
+    div.horz-bars.show-for-medium-up ul.data {
+        margin: 0 0 0 0;
+        width: 100px;
+    }
+
+    div.horz-bars.show-for-medium-up ul.data li div.bar.bar-loser {
+        margin-right: 100px;
+    }
+
+    /* This makes the donut chart on the past trades page appear bigger on iPad landscape view. */ 
+    .chart {
+        width: 220px;
+    }
+}
+
+/* Minor fix for about page on iPhone 6 on landscape view */
+@media only screen and (width:667px) and (orientation: landscape) {
+    .about-concierge-section-left {
+        margin: 0 0 0 0;
+    }
+}
+
+/* Minor fix adjusting the display of the search fields for devices lower than an iPhone 6 display */
+@media only screen and (max-width: 365px) {
+    form#recent-alerts-search-fields {
+        float: left;
+        width: 100%;
+    }
+
+    form#recent-alerts-search-fields select {
+        margin-left: 0;
+    }
+}
+
+/* Custom Swing Trader Notifications CSS Starts here! */
+
+.ui-pnotify.swing-trader-notification .ui-pnotify-container {
+    background-color: #563d93;
+    border: solid 2px #ffffff;
+    height: 200px;
+}
+.ui-pnotify.swing-trader-notification .ui-pnotify-title, .ui-pnotify.custom .ui-pnotify-text {
+    text-shadow: 2px 2px 3px black !important;
+    line-height: 1 !important;
+}
+.ui-pnotify.swing-trader-notification .ui-pnotify-title {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 0 0 25px 0;
+    color: #99cc00;
+    font-family: lato;
+    font-weight: 400;
+    text-align: justify;
+    margin-top: 10px;
+}
+.ui-pnotify.swing-trader-notification .ui-pnotify-text {
+    color: #ffffff;
+    border: solid 1px #ffffff;
+    padding: 5px;
+    text-align: center;
+    font-family: lato;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.ui-pnotify.swing-trader-notification .ui-pnotify-icon {
+    float: left;
+}
+
+.ui-pnotify.swing-trader-notification div.brighttheme.ui-pnotify-container.brighttheme-notice.ui-pnotify-shadow div.ui-pnotify-closer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ffffff;
+}
+
+.ui-pnotify.swing-trader-notification div.brighttheme.ui-pnotify-container.brighttheme-notice.ui-pnotify-shadow div.ui-pnotify-closer span.brighttheme-icon-closer {
+    font-size: 18px;
+}
+
+.ui-pnotify.swing-trader-notification div.brighttheme.ui-pnotify-container.brighttheme-notice.ui-pnotify-shadow div.ui-pnotify-sticker span.brighttheme-icon-sticker {
+    font-size: 18px;
+}
+
+.ui-pnotify.swing-trader-notification div.brighttheme.ui-pnotify-container.brighttheme-notice.ui-pnotify-shadow div.ui-pnotify-sticker {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: #ffffff;    
+}
+
+.ui-pnotify.swing-trader-notification .fa {
+    margin: 3px;
+    width: 33px;
+    height: 33px;
+    font-size: 33px;
+    color: #FF0;
+}

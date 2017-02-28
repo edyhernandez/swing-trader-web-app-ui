@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Swing Trader Overview</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+
+        <!-- Swing Trader FavIcon -->
+        <link rel="icon" href="images/swing-trader-favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="images/swing-trader-favicon.ico" type="image/x-icon">
+
+        <!-- Foundation CSS -->
+        <link rel="stylesheet" href="foundation-5/css/foundation.css">
+        <link rel="stylesheet" href="foundation-5/css/app.css">
+
+        <!-- jQuery library -->
+        <script src="foundation-5/js/vendor/jquery.js"></script>
+
+        <!-- Ellipsis jQuery Code -->
+        <script src="js/ellipsis.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="foundation-5/js/foundation.min.js"></script>
+
+        <!-- Foundation Joyride Script -->
+        <script src="foundation-5/js/foundation/foundation.joyride.js"></script>
+
+        <!-- jQuery Cookie Script -->
+        <script src="foundation-5/js/vendor/jquery.cookie.js"></script>
+
+        <!-- Foundation Off-Canvas Script -->
+        <script src="foundation-5/js/foundation/foundation.offcanvas.js"></script>
+
+        <!-- Foundation Equalizer: Used to make columns within a row equal height! -->
+        <script src="foundation-5/js/foundation/foundation.equalizer.js"></script>
+
+        <!-- Foundation Modernizr Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+        <!-- Foundation Modal Script -->
+        <script src="foundation-5/js/foundation/foundation.reveal.js"></script>
+
+        <!-- Foundation Alert Script -->
+        <script src="foundation-5/js/foundation/foundation.alert.js"></script>
+
+        <!-- Main Navigation Active Script -->
+        <script src="js/swing-trader.js"></script>
+
+        <!-- Experimental Pnotify notifcation files -->
+        <script type="text/javascript" src="js/pnotify.custom.min.js"></script>
+        <link href="css/pnotify.custom.min.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="css/animate.css" media="all" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <div data-alert class="alert-box">
+                    <p>This is what a banner alert would look like.</p>
+                    <a href="#" class="close">&times;</a>
+                </div>
+                <header>
+                    <div class="row full-width show-for-large-up">
+                        <div class="small-12 medium-12 large-4 columns">
+                            <h1 class="logo"><a href="index.html"><img src="images/logo-no-tagline.png" alt="Swing Trader"></a></h1>
+                            <h2 class="logo-tagline"><a href="http://www.investors.com"><img src="images/logo-tagline.png" alt="By Investors Business Daily"></a></h2>                        
+                        </div>
+                        <div class="small-12 medium-12 large-8 columns">
+                            <nav id="main-nav">
+                                <ul>
+                                    <li class="swing-trader-tour-1"><a class="current-trades active-link" href="index.html">CURRENT TRADES</a></li>
+                                    <li class="past-trades"><a class="past-trades swing-trader-tour-7" href="past-trades.html">PAST TRADES</a></li>
+                                    <li class="swing-trader-tour-8"><a class="about-trades" href="about.html">ABOUT</a></li>
+                                    <li><a class="activate-joyride-tour" href="#"><img src="images/swing-trader-tour-icon-v2.png" alt="Tour"></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row full-width show-for-small-only">
+                        <div class="small-12 columns full-width no-padding">
+                            <nav class="tab-bar">
+                                <section class="left-small">
+                                    <a class="left-off-canvas-toggle menu-icon" href="#top"><span></span></a>
+                                </section>
+                                <section class="middle tab-bar-section">
+                                    <h1 class="header-mobile"><a href="#">CURRENT TRADES</a></h1>
+                                </section>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row full-width show-for-medium-only">
+                        <div class="small-12 columns full-width no-padding">
+                            <nav class="tab-bar">
+                                <section class="left-small">
+                                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                                </section>
+                                <section class="middle tab-bar-section">
+                                    <h1 class="header-mobile"><a href="#">CURRENT TRADES</a></h1>
+                                </section>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+
+                <aside class="left-off-canvas-menu">
+                    <ul class="off-canvas-list">
+                        <li><a href="#"><img src="images/logo-no-tagline.png" alt="Swing Trader"></a></li>
+                        <li><a class="current-trades" href="index.html">CURRENT TRADES</a></li>
+                        <li><a class="past-trades" href="past-trades.html">PAST TRADES</a></li>
+                        <li><a class="about-trades" href="about.html">ABOUT</a></li>
+                        <li><a href="concierge.html">CONCIERGE</a></li>
+                        <li><label></label></li>
+                        <li><a href="http://www.investors.com">Investors.com</a></li>
+                    </ul>
+                </aside>
+                <aside id="market-action-section-mobile-off-canvas" class="right-off-canvas-menu">
+                    <div id="market-action-section-mobile">
+                        <h3>MARKET ACTION</h3>
+                        <img src="images/market-action-pressure-arrow.png" alt="Uptrend Under Pressure">
+                        <h4>Uptrend Under Pressure</h4>
+                        <p>Darth Vader had been detained to one of the small TIE Fighters and had the misfortune to be discovered by the Rebels, who were led by Luke Skywalker.</p>
+                    </div>
+                </aside>
+                <a class="exit-off-canvas"></a>
+
+                <div class="wrapper">
+                    <div class="row full-width" data-equalizer="top-section">
+                        <div class="small-12 medium-12 large-8 columns trade-setup-mobile" data-equalizer-watch="top-section">
+                            <div class="panel panelTop">
+                                <div class="row show-for-medium-up">
+                                    <div id="trade-setup-header" class="small-12 large-12 columns">
+                                        <h3 class="swing-trader-tour-2">TRADE SETUP</h3>
+                                        <ul id="trade-setup-nav">
+                                            <li>PREVIOUS</li>
+                                            <li>/</li>
+                                            <li><a href="#">NEXT</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row" data-equalizer="trade-setup">
+                                    <div class="small-12 medium-6 large-6 columns" data-equalizer-watch="trade-setup">
+                                        <h4 class="trade-heading">Apple Inc. <span class="stock-symbol"><a href="trade-details.html">(APPL)</a></span> <span class="short-trade-label"></span></h4>
+                                        <div class="show-for-small-only">
+                                            <a class="right-off-canvas-toggle market-action-mobile"><img src="images/market-action-pressure-arrow.png" alt="Uptrend Under Pressure"></a>
+                                        </div>
+                                        <table id="stock-info-table">
+                                            <tbody>
+                                                <tr>
+                                                    <th>$131.55</th>
+                                                    <td class="trade-arrow-up">5.20</td>
+                                                    <td class="trade-up">(4.1%)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table id="trade-setup-table">
+                                            <tbody>
+                                                <tr>
+                                                    <th>TRADE SETUP</th>
+                                                    <td class="ellipsis multiline trade-data">Two days of gains in above average volume. If it retakes 10-day, buy zone is created.</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>SHORT ZONE</th>
+                                                    <td>$127.55 - $131.55 <br> <span class="buy-zone">STOCK IN BUY ZONE</span> <br> <span class="short-zone">STOCK IN SHORT ZONE</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>STOP LOSS</th>
+                                                    <td class="ellipsis multiline trade-data">Sell if stock falls below the 10-day moving average</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>GOAL</th>
+                                                    <td class="ellipsis multiline trade-data">Sell when stock hits the 50-day moving average.</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="row show-for-small-only">
+                                            <div class="small-12 columns">
+                                                <ul id="trade-setup-nav-mobile">
+                                                    <li><img src="images/nav-icon-previous-v2.svg" alt="previous"></li>
+                                                    <li></li>
+                                                    <li><a href="#"><img src="images/nav-icon-next-v2.svg" alt="next"></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="trade-setup-chart-section" class="small-12 medium-6 large-6 columns" data-equalizer-watch="trade-setup">
+                                        <h6>APPL</h6>
+                                        <figure class="trade-chart">
+                                            <img src="images/chart.jpg" alt="" width="340" height="222">
+                                            <figcaption><a class="swing-trader-tour-5" href="#">See Detailed Chart</a></figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-12 medium-12 large-4 columns" data-equalizer-watch="top-section">
+                            <div id="market-action-section" class="panel panelTop show-for-large-up">
+                                <h3 class="swing-trader-tour-6">MARKET ACTION</h3>
+                                <img src="images/market-action-pressure-arrow.png" alt="Uptrend Under Pressure">
+                                <h4>Uptrend Under Pressure</h4>
+                                <p>Darth Vader had been detained to one of the small TIE Fighters and had the misfortune to be discovered by the Rebels, who were led by Luke Skywalker. <a href="#" data-reveal-id="myModal">More>></a> </p>
+                                <div id="myModal" class="reveal-modal" data-reveal aria-labelledby="myModal" aria-hidden="true" role="dialog">
+                                    <img src="images/market-action-pressure-arrow.png" alt="Uptrend Under Pressure">
+                                    <h4>Uptrend Under Pressure</h4>
+                                    <p>Darth Vader had been detained to one of the small TIE Fighters and had the misfortune to be discovered by the Rebels, who were led by Luke Skywalker.</p>
+                                    <p>Darth Vader had been detained to one of the small TIE Fighters and had the misfortune to be discovered by the Rebels, who were led by Luke Skywalker.</p>
+                                    <p>Darth Vader had been detained to one of the small TIE Fighters and had the misfortune to be discovered by the Rebels, who were led by Luke Skywalker.</p>
+                                    <p>Darth Vader had been detained to one of the small TIE Fighters and had the misfortune to be discovered by the Rebels, who were led by Luke Skywalker.</p>
+                                    <a class="close-reveal-modal" aria-label="close">&#215;</a>
+                                </div>
+                                <table id="market-action-table">
+                                    <tbody>
+                                        <tr>
+                                            <th>NASDAQ</th>
+                                            <td>5,208.78</td>
+                                            <td class="market-green-arrow">523.12</td>
+                                            <td class="market-green">(10.5%)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>S&amp;P 500</th>
+                                            <td>2,068.78</td>
+                                            <td class="market-red-arrow">121.32</td>
+                                            <td class="market-red">(6.25%)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>DJIA</th>
+                                            <td>17,947.69</td>
+                                            <td class="market-red-arrow">31.32</td>
+                                            <td class="market-red">(0.2%)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>NYSE VOL (M)</th>
+                                            <td>464</td>
+                                            <td class="market-red-arrow">21.66</td>
+                                            <td class="market-red">(15%)</td>
+                                        </tr>
+                                        <tr>
+                                            <th>NASDAQ VOL (M)</th>
+                                            <td>765</td>
+                                            <td class="market-red-arrow">41.02</td>
+                                            <td class="market-red">(7%)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                            </div>
+                            <div id="market-action-section-tablet" class="panel show-for-medium-only">
+                                <div class="row">
+                                    <div class="medium-6 columns">
+                                        <h3>MARKET ACTION</h3>
+                                        <img src="images/market-action-pressure-arrow.png" alt="Uptrend Under Pressure">
+                                        <h4>Uptrend Under Pressure</h4>
+                                        <p>Darth Vader had been detained to one of the small TIE Fighters and had the misfortune to be discovered by the Rebels, who were led by Luke Skywalker. <a href="#" data-reveal-id="myModal">More>></a> </p>
+                                        <div id="myModal-tablet" class="reveal-modal" data-reveal aria-labelledby="myModal" aria-hidden="true" role="dialog">
+                                            <img src="images/market-action-pressure-arrow.png" alt="Uptrend Under Pressure">
+                                            <h4>Uptrend Under Pressure</h4>
+                                            <p>Darth Vader had been detained to one of the small TIE Fighters and had the misfortune to be discovered by the Rebels, who were led by Luke Skywalker.</p>
+                                            <p>Darth Vader had been detained to one of the small TIE Fighters and had the misfortune to be discovered by the Rebels, who were led by Luke Skywalker.</p>
+                                            <p>Darth Vader had been detained to one of the small TIE Fighters and had the misfortune to be discovered by the Rebels, who were led by Luke Skywalker.</p>
+                                            <p>Darth Vader had been detained to one of the small TIE Fighters and had the misfortune to be discovered by the Rebels, who were led by Luke Skywalker.</p>
+                                            <a class="close-reveal-modal" aria-label="close">&#215;</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="medium-6 columns">
+                                        <table id="market-action-table-tablet">
+                                            <tbody>
+                                                <tr>
+                                                    <th>NASDAQ</th>
+                                                    <td>5,208.78</td>
+                                                    <td class="market-green-arrow">523.12</td>
+                                                    <td class="market-green">(10.5%)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>S&amp;P 500</th>
+                                                    <td>2,068.78</td>
+                                                    <td class="market-red-arrow">121.32</td>
+                                                    <td class="market-red">(6.25%)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>DJIA</th>
+                                                    <td>17,947.69</td>
+                                                    <td class="market-red-arrow">31.32</td>
+                                                    <td class="market-red">(0.2%)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>NYSE VOL (M)</th>
+                                                    <td>464</td>
+                                                    <td class="market-red-arrow">21.66</td>
+                                                    <td class="market-red">(15%)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>NASDAQ VOL (M)</th>
+                                                    <td>765</td>
+                                                    <td class="market-red-arrow">41.02</td>
+                                                    <td class="market-red">(7%)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row full-width">
+                        <div class="medium-12 columns current-trades-mobile">
+                            <div class="panel overflow">
+                                <h3 class="swing-trader-tour-3">CURRENT TRADES LIST</h3>
+                                <table id="current-trades" class="full-width show-for-medium-up">
+                                    <thead>
+                                        <tr>
+                                            <th><a href="#">SYMBOL</a></th>
+                                            <th><a href="#">COMPANY NAME</a></th>
+                                            <th><a href="#">PRICE</a></th>
+                                            <th class="price-chg"><a href="#">PRICE CHG</a></th>
+                                            <th class="table-center"><a href="#">PRICE % CHG</a></th>
+                                            <th class="vol-chg"><a href="#">VOL % CHG</a></th>
+                                            <th class="table-center"><a class="swing-trader-tour-4" href="#">BUY/SHORT <br>ZONE</a></th>
+                                            <th class="current-gain-loss table-center"><a href="#">CURRENT GAIN/LOSS %</a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th><a href="#">AAPL</a></th>
+                                            <td>Apple. Inc.</td>
+                                            <td >$15.43</td>
+                                            <td class="trade-green price-chg"><img src="images/green-arrow.svg" alt="">1.53</td>
+                                            <td class="trade-green table-center">1.53%</td>
+                                            <td class="trade-green vol-chg"><img src="images/green-arrow.svg" alt="">1%</td>
+                                            <td class="trade-green table-center buy-short">YES</td>
+                                            <td class="table-center">+1.53%</td>
+                                        </tr>
+                                        <tr class="preview">
+                                            <th><a href="#">BBB</a></th>
+                                            <td><span class="new-trade-label"></span>Brown Brothers, Inc.</td>
+                                            <td>$21.15</td>
+                                            <td class="trade-green price-chg"><img src="images/green-arrow.svg" alt="">4.53</td>
+                                            <td class="trade-green table-center">4.53%</td>
+                                            <td class="trade-green vol-chg"><img src="images/green-arrow.svg" alt="">4%</td>
+                                            <td class="trade-green table-center buy-short">YES</td>
+                                            <td class="table-center">+4.53%</td>
+                                        </tr>
+                                        <tr>
+                                            <th><a href="#">CCDD</a></th>
+                                            <td>Coast Energy Inc.</td>
+                                            <td>$42.82</td>
+                                            <td class="trade-green price-chg"><img src="images/green-arrow.svg" alt="">3.92</td>
+                                            <td class="trade-green table-center">3.92%</td>
+                                            <td class="trade-green vol-chg"><img src="images/green-arrow.svg" alt="">3%</td>
+                                            <td class="trade-green table-center buy-short">YES</td>
+                                            <td class="table-center">+3.92%</td>
+                                        </tr>
+                                        <tr>
+                                            <th><a href="#">EIN</a></th>
+                                            <td>Eastern Group Prod. <span class="short-trade-label"></span></td>
+                                            <td>$94.10</td>
+                                            <td class="trade-red price-chg"><img src="images/red-arrow.svg" alt="">6.75</td>
+                                            <td class="trade-red table-center">6.75%</td>
+                                            <td class="trade-red vol-chg"><img src="images/red-arrow.svg" alt="">6%</td>
+                                            <td class="trade-green table-center buy-short">YES</td>
+                                            <td class="table-center">-6.75%</td>
+                                        </tr>
+                                        <tr>
+                                            <th><a href="#">REIM</a></th>
+                                            <td>Rainmaker Solutions</td>
+                                            <td>$61.49</td>
+                                            <td class="trade-green price-chg"><img src="images/green-arrow.svg" alt="">11.52</td>
+                                            <td class="trade-green table-center">11.52%</td>
+                                            <td class="trade-green vol-chg"><img src="images/green-arrow.svg" alt="">11%</td>
+                                            <td class="trade-green table-center buy-short">YES</td>
+                                            <td class="table-center">+11.52%</td>
+                                        </tr>
+                                        <tr>
+                                            <th><a href="#">SRTI</a></th>
+                                            <td>Southwest Trans Inc.</td>
+                                            <td>$100.23</td>
+                                            <td class="trade-red price-chg"><img src="images/red-arrow.svg" alt="">4.39</td>
+                                            <td class="trade-red table-center">4.39%</td>
+                                            <td class="trade-red vol-chg"><img src="images/red-arrow.svg" alt="">4%</td>
+                                            <td class="trade-red table-center buy-short">NO</td>
+                                            <td class="table-center">-4.39%</td>
+                                        </tr>
+                                        <tr>
+                                            <th><a href="#">XYZ</a></th>
+                                            <td>Xeigraph Farming</td>
+                                            <td>$161.41</td>
+                                            <td class="trade-red price-chg"><img src="images/red-arrow.svg" alt="">3.89</td>
+                                            <td class="trade-red table-center">3.89%</td>
+                                            <td class="trade-red vol-chg"><img src="images/red-arrow.svg" alt="">3%</td>
+                                            <td class="trade-red table-center buy-short">NO</td>
+                                            <td class="table-center">-3.89%</td>
+                                        </tr>
+                                        <tr>
+                                            <th><a href="#">XOMA</a></th>
+                                            <td>XOMA Inc.</td>
+                                            <td>$51.62</td>
+                                            <td class="trade-green price-chg"><img src="images/green-arrow.svg" alt="">20.39</td>
+                                            <td class="trade-green table-center">20.39%</td>
+                                            <td class="trade-green vol-chg"><img src="images/green-arrow.svg" alt="">20%</td>
+                                            <td class="trade-red table-center buy-short">NO</td>
+                                            <td class="table-center">+20.39%</td>
+                                        </tr>
+                                        <tr>
+                                            <th><a href="#">CDOS</a></th>
+                                            <td>CDOS Productions</td>
+                                            <td>$159.64</td>
+                                            <td class="trade-red price-chg"><img src="images/green-arrow.svg" alt="">19.27</td>
+                                            <td class="trade-red table-center">19.27%</td>
+                                            <td class="trade-red vol-chg"><img src="images/green-arrow.svg" alt="">19%</td>
+                                            <td class="trade-red table-center buy-short">NO</td>
+                                            <td class="table-center">-19.27%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="show-for-small-only">
+                                    <table id="current-trades-mobile" class="full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>SYMBOL</th>
+                                                <th class="price">PRICE</th>
+                                                <th>BUY/SHORT ZONE</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th><a href="#">AAPL</a></th>
+                                                <td >$15.43</td>
+                                                <td class="trade-green">YES</td>
+                                            </tr>
+                                            <tr class="preview">
+                                                <th><a href="#">BBB</a> <span class="new-trade-label">N</span></th>
+                                                <td>$21.15</td>
+                                                <td class="trade-green">YES</td>
+                                            </tr>
+                                            <tr>
+                                                <th><a href="#">CCDD</a> <span class="new-trade-label">N</span> <span class="short-trade-label">S</span></th>
+                                                <td>$42.82</td>
+                                                <td class="trade-green">YES</td>
+                                            </tr>
+                                            <tr>
+                                                <th><a href="#">EIN</a> <span class="short-trade-label">S</span></th>
+                                                <td>$94.10</td>
+                                                <td class="trade-green">YES</td>
+                                            </tr>
+                                            <tr>
+                                                <th><a href="#">REIM</a></th>
+                                                <td>$61.49</td>
+                                                <td class="trade-green">YES</td>
+                                            </tr>
+                                            <tr>
+                                                <th><a href="#">SRTI</a></th>
+                                                <td>$100.23</td>
+                                                <td class="trade-red">NO</td>
+                                            </tr>
+                                            <tr>
+                                                <th><a href="#">XYZ</a></th>
+                                                <td>$161.41</td>
+                                                <td class="trade-red">NO</td>
+                                            </tr>
+                                            <tr>
+                                                <th><a href="#">XOMA</a></th>
+                                                <td>$51.62</td>
+                                                <td class="trade-red">NO</td>
+                                            </tr>
+                                            <tr>
+                                                <th><a href="#">CDOS</a></th>
+                                                <td>$159.64</td>
+                                                <td class="trade-red">NO</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="row full-width">
+                            <div class="small-12 medium-12 large-12 columns">
+                                <p>Copyright 2015 Investor's Business Daily. 07/30/2015 (Market Close)</p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <ol id="tour" class="joyride-list" data-joyride="">
+            <li class="joyride-start">
+                <h3>Welcome to SwingTrader!</h3>
+                <p>Here’s a quick tour to help you get started.</p>
+            </li>
+            <li data-class="swing-trader-tour-1" data-options="tip_location: top;">
+                <h4>Current Trades</h4>
+                <p>Start by looking at the current trades page. Here, you’ll get a quick look at stocks currently on the list and a preview of every trade.</p>
+            </li>
+            <li data-class="swing-trader-tour-2" data-options="tip_location: right;">
+                <h4>Trade Setup</h4>
+                <p>In this section, we give you actionable details for every trade, including:</p>
+                <ul>
+                    <li>The Trade Setup</li>
+                    <li>Buy/Short Zone</li>
+                    <li>Stop Loss</li>
+                    <li>Profit Goal</li>
+                </ul>
+            </li>
+            <li data-class="swing-trader-tour-3" data-options="tip_location: bottom;">
+                <h4>Current Trades List</h4>
+                <p>Here, you'll see what stocks are currently on the list and their action throughout the day, including current performance.</p>
+            </li>
+            <li data-class="swing-trader-tour-4" data-options="tip_location: right;">
+                <h4>Buy/Short Zone</h4>
+                <p>This column gives you a quick look at what stocks are currently in a buy/short zone. Simply look for a yes!</p>
+            </li>
+            <li data-class="swing-trader-tour-5" data-options="tip_location: bottom;">
+                <h4>Chart Details</h4>
+                <p>Click here to get a full screen chart with annotations and additional details.</p>
+            </li>
+            <li data-class="swing-trader-tour-6" data-options="tip_location: left;">
+                <h4>Market Action</h4>
+                <p>The analysis in SwingTrader is tailored for a swing trading environment, so it might be different from the analysis in other IBD products you may use.</p>
+            </li>
+            <li data-class="swing-trader-tour-7" data-options="tip_location: left;">
+                <h4>Past Trades</h4>
+                <p>Once a trade reaches the profit goal, or triggers a stop loss, it moves to the past trades section. Click on any ticker to get a snapshot of the closed trade.</p>
+            </li>
+            <li data-class="swing-trader-tour-8" data-button="End" data-options="tip_location: left;">
+                <h4>About</h4>
+                <p>Visit our about page to learn more about SwingTrader or contact your concierge. We can help you with questions on the product, receiving notifications or anything else!</p>
+            </li>
+        </ol>
+        <script>
+            $(document).foundation();
+        </script>
+
+        <script>
+            $(document).ready(function () {
+
+                if ($(window).width() >= 1024) {
+                    var biggestHeight = 0;
+                    var panelHeight = $('.panelTop').height();
+                    $('.panelTop').each(function () {
+
+                        if ($(this).height() > biggestHeight) {
+
+                            biggestHeight = $(this).height();
+                        }
+                    });
+                    $('.panelTop').height(biggestHeight);
+                } else {
+                    ('.panelTop').height(panelHeight);
+                }
+            });
+        </script>
+        <script>
+            // When ready...
+            window.addEventListener("load", function () {
+                // Set a timeout...
+                setTimeout(function () {
+                    // Hide the address bar!
+                    window.scrollTo(0, 1);
+                }, 0);
+            });
+        </script>
+        <!-- This makes the off-canvas menu jump to the top of the page when it's opened in the middle or below the page! This is without an animation effect. -->
+        <script>
+            $("a[class='left-off-canvas-toggle menu-icon']").click(function () {
+                $("html, body").scrollTop(0);
+                $("left-off-canvas-menu").open({scrollTop: 0});
+                return false;
+            });
+        </script>
+        <!-- Joyride Cookie and Initialization Script-->
+        <script>
+
+            if ($(window).width() > 1024) { // This fires joyride only if the width of the browser is above 1024 pixels.
+                $(document).foundation({
+                    joyride: {
+                        expose: false,
+                        scroll_animation: 'swing',
+                        tip_animation: 'fade',
+                        cookie_monster: !$.cookie('joyride') ? false : true,
+                        post_ride_callback: function () {
+                            !$.cookie('joyride') ? $.cookie('joyride', 'ridden', {expires: 365}) : null;
+                        }
+                    }
+                }).foundation('joyride', 'start');
+            }
+
+            //This activates the joyride cookie if a user closes the joyride tour before viewing it entirely.
+            $('.joyride-close-tip').click(function () {
+                $.cookie('joyride', 'ridden', {expires: 365});
+            });
+
+            //Activate Joyride Tour again on demand
+            $('.activate-joyride-tour').click(function () {
+                if ($('.joyride-tip-guide').is(':visible')) { // This checks if a Joyride tip guide is visible. If there is, joyride will not relaunch again when clicking on the tour icon!
+                    console.log ('Joyride is active. Do not relaunch another instance of joyride until the active instance is closed!'); // This adds this message to the console log.
+                } else {
+                    $(document).foundation({
+                        joyride: {
+                            expose: false,
+                            scroll_animation: 'swing',
+                            tip_animation: 'fade',
+                            cookie_monster: !$.cookie('joyride') ? true : false,
+                            post_ride_callback: function () {
+                                !$.cookie('joyride') ? $.cookie('joyride', 'ridden', {expires: 365}) : null;
+                            }
+                        }
+                    }).foundation('joyride', 'start');
+                }
+            });
+        </script>
+        <!-- End Joyride Cookie and Initialization Scripts! -->
+    </body>
+</html>

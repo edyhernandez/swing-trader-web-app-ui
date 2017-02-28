@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<!-- 
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width" />
+
+        <title>Login | SwingTrader</title>
+
+        <style type="text/css">
+            .lblogin {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            #lblogwrap { margin-left:auto; margin-right:auto; margin-top:100px;}
+            #lblogwrap a { border:none; color:#666; text-decoration:none;}
+
+            #lblogcenter { margin-left:auto; margin-right:auto; margin-top:96px; width:640px; background-image:url(images/st-login-frame.png); background-repeat:no-repeat; height:550px;}
+            #lblogform{margin-left:auto; margin-right:auto;padding-top:200px; width:358px; font-family:Arial, Helvetica, sans-serif;}
+
+            #lblogform h1 { font-size:24px; margin:0 0 5px 0; color:#333; text-transform: none;}
+            #lblogform p { font-size:13px; margin:5px; color:#666;  text-align:right;}
+            
+            input {border: solid #666666 1px; width: 100%; height: 30px; margin-bottom: 10px; padding-left: 10px; font-size: 16px;}
+
+            @media all and (max-width: 500px) {
+                #lblogform { padding-top:150px; width:auto; margin-left:20px;}
+                #lblogform b, #lblogform iframe { width:98%!important; }
+                #lblogcenter { margin-top:0px; width:auto; height:420px; background-size: 100% 100%;}
+                #lblogwrap { margin-top:0px;} 
+                #hrefSignInSubmit img { width: 95%!important;}
+            }
+        </style>
+    </head>
+
+    <body bgcolor="#e1e5e8">
+
+        <form id="form1" action="">
+
+            <div id="lblogwrap">
+                <div id="lblogcenter">
+                    <div id="lblogform">
+                        <h1>Subscriber Login</h1>
+                        <input type="text" name="user" placeholder="Username"> <br>
+                        <input type="password" name="password" placeholder="Password">
+
+                        <a id="hrefSignInSubmit" href="#">
+                            <img src="images/st-login-button.png" width="358" height="45" alt="Login" border="0" />
+                        </a>
+
+                        <p>
+                            <a href="#">Forgot your password?</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <script type="text/javascript">
+            var signInBtn = document.getElementById("hrefSignInSubmit");
+            if (signInBtn) {
+                signInBtn.onclick = function () {
+                    leaderboard.loginProcess();
+                    return false;
+                };
+            }
+        </script>
+    </body>
+</html>

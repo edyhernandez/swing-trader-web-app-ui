@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<!-- 
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Trade Details</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+
+        <!-- Swing Trader FavIcon -->
+        <link rel="icon" href="images/swing-trader-favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="images/swing-trader-favicon.ico" type="image/x-icon">
+
+        <!-- Foundation CSS -->
+        <link rel="stylesheet" href="foundation-5/css/foundation.css">
+        <link rel="stylesheet" href="foundation-5/css/app.css">
+
+        <!-- jQuery library -->
+        <script src="foundation-5/js/vendor/jquery.js"></script>
+
+        <!-- Ellipsis jQuery Code -->
+        <script src="js/ellipsis.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="foundation-5/js/foundation.min.js"></script>
+
+        <!-- Foundation Off-Canvas Script -->
+        <script src="foundation-5/js/foundation/foundation.offcanvas.js"></script>
+
+        <!-- Foundation Equalizer: Used to make columns within a row equal height! -->
+        <script src="foundation-5/js/foundation/foundation.equalizer.js"></script>
+
+        <!-- Foundation Modernizr Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+        <!-- Foundation Modal Script -->
+        <script src="foundation-5/js/foundation/foundation.reveal.js"></script>
+        
+        <!-- Foundation Alert Script -->
+        <script src="foundation-5/js/foundation/foundation.alert.js"></script>
+
+        <!-- Main Navigation Active Script -->
+        <script src="js/swing-trader.js"></script>
+
+        <!-- Experimental Pnotify notifcation files -->
+        <script type="text/javascript" src="js/pnotify.custom.min.js"></script>
+        <link href="css/pnotify.custom.min.css" media="all" rel="stylesheet" type="text/css" />
+        <link href="css/animate.css" media="all" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <body>
+        <div class="off-canvas-wrap" data-offcanvas>
+            <div class="inner-wrap">
+                <div data-alert class="alert-box">
+                    <p>This is what a banner alert would look like.</p>
+                    <a href="#" class="close">&times;</a>
+                </div>
+                <header>
+                    <div class="row full-width show-for-large-up">
+                        <div class="small-12 medium-12 large-6 columns">
+                            <h1 class="logo"><a href="index.html"><img src="images/logo-no-tagline.png" alt="Swing Trader"></a></h1>
+                            <h2 class="logo-tagline"><a href="http://www.investors.com"><img src="images/logo-tagline.png" alt="By Investors Business Daily"></a></h2>
+                        </div>
+                        <div class="small-12 medium-12 large-6 columns">
+                            <nav id="main-nav">
+                                <ul>
+                                    <li><a class="current-trades" href="index.html">CURRENT TRADES</a></li>
+                                    <li><a class="past-trades" href="past-trades.html">PAST TRADES</a></li>
+                                    <li><a class="about-trades" href="about.html">ABOUT</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row full-width show-for-small-only">
+                        <div class="small-12 columns full-width no-padding">
+                            <nav class="tab-bar">
+                                <section class="left-small">
+                                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                                </section>
+                                <section class="middle tab-bar-section">
+                                    <h1 class="header-mobile"><a href="#">TRADE DETAILS</a></h1>
+                                </section>
+                                <section class="right-small">
+                                    <a class="right-off-canvas-toggle"><img src="images/icon-calculator-v2.svg" alt="Position Size Calculator"></a>
+                                </section>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="row full-width show-for-medium-only">
+                        <div class="small-12 columns full-width no-padding">
+                            <nav class="tab-bar">
+                                <section class="left-small">
+                                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                                </section>
+                                <section class="middle tab-bar-section">
+                                    <h1 class="header-mobile"><a href="#">TRADE DETAILS</a></h1>
+                                </section>
+                                <section class="right-small">
+                                    <a class="right-off-canvas-toggle"><img src="images/icon-calculator-v2.svg" alt="Position Size Calculator"></a>
+                                </section>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <div class="wrapper">
+                    <aside class="left-off-canvas-menu">
+                        <ul class="off-canvas-list">
+                            <li><a href="#"><img src="images/logo-no-tagline.png" alt="Swing Trader"></a></li>
+                            <li><a class="current-trades" href="index.html">CURRENT TRADES</a></li>
+                            <li><a class="past-trades" href="past-trades.html">PAST TRADES</a></li>
+                            <li><a class="about-trades" href="about.html">ABOUT</a></li>
+                            <li><a href="concierge.html">CONCIERGE</a></li>
+                            <li><label></label></li>
+                            <li><a href="http://www.investors.com">Investors.com</a></li>
+                        </ul>
+                    </aside>
+                    <a class="exit-off-canvas"></a>
+
+                    <div class="row full-width">
+                        <div class="small-12 medium-12 large-12 columns trade-details-mobile">
+                            <div class="panel full-width">
+                                <div class="row trade-details-header-section">
+                                    <div class="small-12 medium-12 large-12 columns full-width">
+                                        <div class="row show-for-small-only">
+                                            <div class="small-2 columns">
+                                                <ul id="trade-details-nav-mobile-previous">
+                                                    <li><img src="images/nav-icon-previous-v2.svg" alt="previous"></li>
+                                                </ul>
+                                            </div>
+                                            <div class="small-8 columns no-padding">
+                                                <h3 id="trade-details-trade-name-mobile">Apple Inc.<span class="stock-symbol">(APPL)</span> <span class="short-trade-label">S</span></h3>
+                                            </div>
+                                            <div class="small-2 columns">
+                                                <ul id="trade-details-nav-mobile-next">
+                                                    <li><a href="#"><img src="images/nav-icon-next-v2.svg" alt="next"></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row show-for-small-only">
+                                            <div class="small-12 columns">
+                                                <table id="trade-details-stock-info-mobile">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>$187375</th>
+                                                            <td class="stock-up-arrow"><img src="images/green-arrow.svg" alt="Trade Up">2526</td>
+                                                            <td class="stock-up">(1%)</td>
+                                                            <th class="volume">VOL</th>
+                                                            <td class="volume-down-arrow"><img src="images/red-arrow.svg" alt="Volume Down">99%</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <h3 id="trade-details-trade-name" class="show-for-medium-up">Apple Inc.<span class="stock-symbol">(APPL)</span></h3>
+                                        <table id="trade-details-stock-info" class="show-for-medium-up">
+                                            <tbody>
+                                                <tr>
+                                                    <th>$187375</th>
+                                                    <td class="stock-up-arrow">2526.98</td>
+                                                    <td class="stock-up">(1.33%)</td>
+                                                    <th class="volume">VOL</th>
+                                                    <td class="volume-down-arrow">999%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div id="trade-details-nav" class="show-for-medium-up">
+                                            <ul>
+                                                <li>Previous</li>
+                                                <li>/</li>
+                                                <li><a href="#">Next</a></li>
+                                            </ul>
+                                        </div>
+                                        <div id="trade-details-chart-nav" class="show-for-medium-up">
+                                            <a class="chart-daily" href="#" title="Daily"></a>
+                                            <a class="chart-weekly" href="#" title="Weekly"></a>
+                                            <a class="chart-intraday" href="#" title="Intraday"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" data-equalizer="trade-details">
+                                    <div class="small-12 large-9 columns float-right trade-details-chart-section-mobile" data-equalizer-watch="trade-details">
+                                        <figure id="trade-details-chart">
+                                            <img src="images/chart.jpg" alt="">
+                                        </figure>
+                                        <p class="powered-by-marketsmith show-for-medium-up">Charts powered by <span class="marketsmith-color">MarketSmith</span></p>
+                                        <ul id="trade-details-chart-legend" class="show-for-large-up">
+                                            <li class="five-day"><span class="five-day-legend-block"></span>5-day Moving Avg.</li>
+                                            <li class="ten-day"><span class="ten-day-legend-block"></span>10-day Moving Avg.</li>
+                                            <li class="fifty-day"><span class="fifty-day-legend-block"></span>50-day Moving Avg.</li>
+                                            <li class="relative-strength"><span class="relative-strength-legend-block"></span>Relative Strength vs. S&AMP;P 500</li>
+                                        </ul>
+                                        <div class="row show-for-small-only trade-details-mobile-nav-section">
+                                            <div class="small-12 columns">
+                                                <div id="trade-details-chart-nav-mobile">
+                                                    <a class="chart-mobile-daily" href="#"></a>
+                                                    <a class="chart-mobile-weekly" href="#"></a>
+                                                    <a class="chart-mobile-intraday" href="#"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="small-12 large-3 columns" data-equalizer-watch="trade-details">
+                                        <table id="trade-details-table-info">
+                                            <tbody>
+                                                <tr>
+                                                    <th>TRADE SETUP <span class="short-trade-label"></span></th>
+                                                    <td>Two days of gains in above average volume. If it retakes 10-day, buy zone is created</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>SHORT ZONE</th>
+                                                    <td>$51.37 - $52.23 <br>
+                                                        <span class="buy-zone-message">Stock in Buy Zone</span>
+                                                        <span class="short-zone-message">Stock in Short Zone</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>STOP LOSS</th>
+                                                    <td>Sell if $50.27</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>GOAL</th>
+                                                    <td>10% profit at 56.60 or 1st close under 5-day</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>EARNINGS DUE DATE</th>
+                                                    <td>Sept. 30, 2015</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="trade-details-calculator-section show-for-medium-up">
+                                            <div class="time-stamp-area">
+                                                <p class="time-stamp">Last updated on 4:22 PM ET</p>
+                                            </div>
+                                            <table id="trade-details-table-calculator">
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="#" data-reveal-id="position-size-calculator-modal"><span class="position-size-calculator">POSITION SIZE CALCULATOR</span></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div id="position-size-calculator-modal" class="reveal-modal" data-reveal aria-labelledby="position-size-calculator-modal" aria-hidden="true" role="dialog">
+                                                <img src="images/icon-calculator-v2.svg" alt="Position Size Calculator">
+                                                <span class="position-size-calculator-heading">POSITION SIZE CALCULATOR</span>
+                                                <span class="short-trade-label"></span>
+                                                <table id="position-size-calculator">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Symbol</th>
+                                                            <td>
+                                                                <input type="text" name="Symbol">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Portfolio Size</th>
+                                                            <td>
+                                                                <input class="dollar-sign" type="text" name="Portfolio Size" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                                       title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Capital Risk (%)</th>
+                                                            <td>
+                                                                <input type="text" name="Capital Risk" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                                       title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Dollar Risk</th>
+                                                            <td>
+                                                                <input class="dollar-sign" type="text" name="Dollar Risk" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                                       title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Entry Price</th>
+                                                            <td>
+                                                                <input class="dollar-sign" type="text" name="Entry Price" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                                       title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Stop Loss %</th>
+                                                            <td>
+                                                                <input type="text" name="Stop Loss %" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                                       title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Stop Loss Value</th>
+                                                            <td>
+                                                                <input type="text" name="Stop Loss $" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                                       title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <hr>
+                                                <table id="position-size-calculator-results">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Number of Shares</th>
+                                                            <td>137</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Position Size for Trade</th>
+                                                            <td>$16,666.67</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <a class="close-reveal-modal" aria-label="close">&#215;</a>
+                                            </div>
+                                        </div>
+
+                                        <!-- Experimental Off Canvas Mobile Calculator Section Starts Here -->
+
+                                        <div class="trade-details-calculator-section-mobile show-for-small-only">
+                                            <div class="time-stamp-area">
+                                                <p class="time-stamp">Last updated on 4:22 PM ET</p>
+                                            </div>
+                                            <!-- <table id="trade-details-table-calculator-mobile">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>EARNINGS DUE DATE</th>
+                                                        <td>Sept. 30, 2015</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="#" class="right-off-canvas-toggle"><img src="images/icon-calculator-v2.svg" alt="Position Size Calculator"><span class="position-size-calculator">POSITION SIZE <br>CALCULATOR</span></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table> -->
+                                        </div>
+                                        <!-- Experimental Off Canvas Mobile Calculator Section Ends Here! -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer>
+                        <div class="row full-width">
+                            <div class="small-12 medium-6 large-7 columns show-for-small-only">
+                                <ul id="trade-details-chart-legend">
+                                    <li class="five-day"><span class="five-day-legend-block"></span>5-day Moving Avg.</li>
+                                    <li class="ten-day"><span class="ten-day-legend-block"></span>10-day Moving Avg.</li>
+                                    <li class="fifty-day"><span class="fifty-day-legend-block"></span>50-day Moving Avg.</li>
+                                    <li class="relative-strength"><span class="relative-strength-legend-block"></span>Relative Strength vs. S&AMP;P 500</li>
+                                </ul>
+                                <p class="powered-by-marketsmith">Charts powered by <span class="marketsmith-color">MarketSmith</span></p>
+                            </div>
+                            <div class="small-12 medium-12 large-7 columns show-for-medium-only">
+                                <ul id="trade-details-chart-legend">
+                                    <li class="five-day"><span class="five-day-legend-block"></span>5-day Moving Avg.</li>
+                                    <li class="ten-day"><span class="ten-day-legend-block"></span>10-day Moving Avg.</li>
+                                    <li class="fifty-day"><span class="fifty-day-legend-block"></span>50-day Moving Avg.</li>
+                                    <li class="relative-strength"><span class="relative-strength-legend-block"></span>Relative Strength vs. S&AMP;P 500</li>
+                                </ul>
+                            </div>
+                            <div class="small-12 medium-12 large-12 columns">
+                                <p>Copyright 2015 Investor's Business Daily. 07/30/2015 (Market Close)</p>
+                            </div>
+                        </div>
+                    </footer>
+
+                    <aside id="position-size-calculator-offcanvas" class="right-off-canvas-menu">
+                        <div class="position-size-calculator-mobile-container">
+                            <img src="images/icon-calculator-v2.svg" alt="Position Size Calculator">
+                            <span class="position-size-calculator-heading">POSITION SIZE CALCULATOR</span>
+                            <span class="short-trade-label"></span>
+                            <table id="position-size-calculator-mobile">
+                                <tbody>
+                                    <tr>
+                                        <th>Symbol</th>
+                                        <td>
+                                            <input type="text" name="Symbol">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Portfolio Size</th>
+                                        <td>
+                                            <input class="dollar-sign" type="text" name="Portfolio Size" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                   title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Capital Risk (%)</th>
+                                        <td>
+                                            <input type="text" name="Capital Risk" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                   title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Dollar Risk</th>
+                                        <td>
+                                            <input class="dollar-sign" type="text" name="Dollar Risk" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                   title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Entry Price</th>
+                                        <td>
+                                            <input class="dollar-sign" type="text" name="Entry Price" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                   title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Stop Loss %</th>
+                                        <td>
+                                            <input type="text" name="Stop Loss %" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                   title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>Stop Loss Value</th>
+                                        <td>
+                                            <input type="text" name="Stop Loss $" pattern="^\d*(\.\d{2}$)?" size="4"
+                                                   title="CDA Currency Format - no dollar sign and no comma(s) - cents (.##) are optional">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <hr>
+                            <table id="position-size-calculator-results-mobile">
+                                <tbody>
+                                    <tr>
+                                        <th>Number of Shares</th>
+                                        <td>137</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Position Size for Trade</th>
+                                        <td>$16,666.67</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).foundation();
+        </script>
+        <script>
+            // When ready...
+            window.addEventListener("load", function () {
+                // Set a timeout...
+                setTimeout(function () {
+                    // Hide the address bar!
+                    window.scrollTo(0, 1);
+                }, 0);
+            });
+        </script>
+        <!-- This makes the off-canvas menu jump to the top of the page when it's opened in the middle or below the page! This is without an animation effect. -->
+        <script>
+            $("a[class='left-off-canvas-toggle menu-icon']").click(function () {
+                $("html, body").scrollTop(0);
+                $("left-off-canvas-menu").open({scrollTop: 0});
+                return false;
+            });
+            $("a[class='right-off-canvas-toggle']").click(function () {
+                $("html, body").scrollTop(0);
+                $("left-off-canvas-menu").open({scrollTop: 0});
+                return false;
+            });
+        </script> 
+    </body>
+</html>
